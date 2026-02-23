@@ -1,66 +1,95 @@
-<!DOCTYPE html><html lang="ko"><head>
-<meta charSet="utf-8"/>
-<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no,viewport-fit=cover"/>
-<meta property="og:title" content="경차 보험료"/>
-<meta property="og:site_name" content="경차 보험료" />
-<meta property="og:type" content="website"/>
-<meta property="og:url" content="/"/>
-<meta property="og:image" content="https://financial.pstatic.net/insurance/insurance_car.png"/>
+<!DOCTYPE html>
+<html lang="ko" ng-app="PC/AppModule">
+<head>
+    <base href="/"></base>
+    <!--[if IE]><script type="text/javascript">
+    // Fix for IE ignoring relative base tags.
+    (function() {
+      var baseTag = document.getElementsByTagName('base')[0];
+      baseTag.href = baseTag.href;
+    })();
+    </script><![endif]-->
+
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=yes">
+<meta property="og:title" content="경차보험료 (2026)" />
+<meta property="og:site_name" content="경차보험료 (2026)" />
+
 <meta name="description" content="" />
-<meta property="og:description" content=""/>
+<meta property="og:description" content="" />
 <meta itemprop="description" content="" />
-<meta name="twitter:description" content=""/>
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="경차 보험료"/>
-<meta name="twitter:url" content="/"/>
-<meta name="twitter:image" content="https://financial.pstatic.net/insurance/insurance_car.png"/>
+<meta name="twitter:description" content="" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="경차보험료 (2026)" />
+<meta name="twitter:image:width" content="320" />
+<meta name="twitter:image:height" content="320" />
+
+<meta property="og:type" content="website" />
+<meta property="og:locale" content="ko_KR" />
+<meta property="og:image:width" content="320" />
+<meta property="og:image:height" content="320" />
+<meta property="og:image:type" content="image/jpeg" />
 <meta name="google-site-verification" content="wfZydaMj4Kbr_OrpLwv0BIRA1K9HwwFN5Plul6ZCz5k" />
 <meta name="naver-site-verification" content="7f5902c7a6997a8a28164ae4bca1fbfbcd24bfbd" />
 
 
-<meta name="location" content="South Korea" />
-<meta name="distribution" content="global" />
-<meta name="rating" content="general" />
-<meta itemprop="name" content="" />
+<link rel="canonical" href="/">
 
-	<link rel="stylesheet" href="./Img/reset.css">
-	<link rel="stylesheet" href="./Img/main.css">
-	<link rel="stylesheet" href="./common/swiper.css" />
-	<script src="./jquery.min.js"></script>
-	<script src="./jquery.serializeObject.min.js"></script>
-	<script src="./json3.min.js"></script>
-	<script src="./bxslider.js" type="text/javascript"></script>
-	<script src="./common/moment.min.js"></script>
+<meta name="robots" content="index, follow">
+<meta name="NaverBot" content="index, follow" />
+<meta name="Yeti" content="index, follow" />
+<meta name="googlebot" content="index, follow" />
 
 
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta http-equiv="cache-control" content="max-age=0" />
+    <meta http-equiv="cache-control" content="no-cache" />
+    <meta http-equiv="expires" content="0" />
+    <meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT" />
+    <meta http-equiv="pragma" content="no-cache" />
 
-    <!-- 리소스 힌트 (성능 최적화) -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="dns-prefetch" href="/">
-
-    <!-- Apple iOS 최적화 -->
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <meta name="apple-mobile-web-app-title" content="경차 보험료">
-
-    <!-- Android Chrome 최적화 -->
-    <meta name="mobile-web-app-capable" content="yes">
-    <meta name="application-name" content="경차 보험료">
-
-    <!-- 모바일 뷰포트 최적화 -->
-    <meta name="viewport"
-        content="width=device-width, initial-scale=1.0, maximum-scale=5.0, minimum-scale=1.0, user-scalable=yes, viewport-fit=cover">
-
-    <!-- 모바일 브라우저 최적화 -->
-    <meta name="format-detection" content="telephone=no, address=no, email=no">
-    <meta name="HandheldFriendly" content="true">
-    <meta name="MobileOptimized" content="width">
+    <script src="https://ssl.pstatic.net/static/calendar/js/calendar_scrap_ssl.js"></script>
+    <script src="externals/moment.min.js"></script>
+    <script src="externals/moment-timezone-with-data-2010-2020.min.js"></script>
+    <script type="text/javascript" src="https://openapi.map.naver.com/openapi/maps3.js"></script>
 
 
+<body class="{{'biz' + $stateParams.biztpId}}" ng-class="{
+    nopreview : isPreview,
+    ie8fix : isIE8,
+    event : $location.path().match('/event'),
+    talk : $location.path().match('/talk') || $location.path().match('/delivery-address'),
+    partner_preview : $location.path().match('/preview')
+}">
 
-	
-<title>경차 보험료</title>
+<app></app>
 
+<!-- LCS log -->
+<script src="lcslog.js"></script>
+<script type="text/javascript">
+    // lcs 호출
+    window.lcs_SerName = window.location.hostname === 'booking.naver.com' ? "lcs.naver.com" : "alpha-lcs.naver.com";
+    window.lcsCallFirst = true;
+    if (!(window.location.pathname == '/booked/list' && window.location.search == '')
+            && !(/^\/booking\/(5|6|8|12)\/bizes\/[0-9]+\/search$/.test(window.location.pathname))
+            && !(/^\/[0-9]+\/booking\/*/.test(window.location.pathname))
+            && (window.location.pathname.indexOf("/booking/svc/") == -1)) {
+        window.lcsLocation = window.location;
+        lcs_do();
+    }
+    
+    var userAgent = navigator.userAgent
+    var isIeLt11 = !!(userAgent && (userAgent.match('Trident') || userAgent.match('MSIE')) && !userAgent.match('rv'))
+    if (isIeLt11) {
+        location.href='/happyBrowser.html'
+    }
+</script>
+<script type="text/javascript" src="polyfills.e14db188ff6e521b21b0.js"></script><script type="text/javascript" src="vendor.e14db188ff6e521b21b0.js"></script><script type="text/javascript" src="app.e14db188ff6e521b21b0.js"></script>
+
+
+<title>경차보험료 (2026)</title>
 <meta name="next-head-count" content="25"/>
 <meta charSet="utf-8"/>
 <meta name="format-detection" content="telephone=no"/>
@@ -68,405 +97,737 @@
 
 
 
+ <style>
+        /* 기본 스타일 초기화 */
+        body, h1, h2, h3, p, ul, ol, li, form, fieldset, legend, input, select, textarea, button {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-  <!-- Schema.org WebPage & InsuranceProduct 마크업(JSON-LD) -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    "mainEntityOfPage": {
-      "@type": "WebPage",
-      "@id": "https://도메인/compact-car-insurance"
-    },
-    "headline": "2026년 경차 자동차 보험료 비교 가이드: 최저가 견적 & 할인 팁",
-    "description": "2026년 최신 경차 보험료 가이드: 모닝, 캐스퍼, 레이 등 모델별 평균 가격 비교, 다이렉트 할인 팁, 운전 경력별 견적 산출 방법, 주요 보험사별 차이점 및 가입 순위 분석.",
-    "keywords": "경차 보험료, 경차 자동차 보험료, 모닝 보험료, 캐스퍼 보험료, 레이 보험료, 경차 보험료 비교, 다이렉트 보험 할인, 경차 보험료 싼곳, 2026 자동차 보험료, 자동차 보험 견적",
-    "about": {
-      "@type": "InsuranceProduct",
-      "name": "경차 자동차 보험",
-      "description": "경차 운전자를 위한 최적의 자동차 보험 상품 비교 및 할인 정보 제공",
-      "productSupported": {
-        "@type": "Automobile",
-        "name": "경차",
-        "model": ["기아 모닝", "현대 캐스퍼", "기아 레이", "쉐보레 스파크"]
-      },
-      "areaServed": {
-        "@type": "Country",
-        "name": "대한민국"
-      }
-    },
-    "publisher": {
-      "@type": "Organization",
-      "name": "경차 보험료 비교센터",
-      "url": "https://도메인/"
-    }
-  }
-  </script>
+        /* 기본 폰트 및 배경색 */
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f7f9fc; /* 부드러운 배경색 */
+        }
 
-  <!-- Google Fonts: Noto Sans KR (부드러운 디자인 요청에 따라 폰트 적용) -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+        /* 레이아웃 컨테이너 */
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
 
-  <!-- 부드럽고 다채로운 색상 + 계층 잘 보이도록 개선 -->
-  <style>
-    body { font-family: 'Noto Sans KR', sans-serif; margin: 0; padding: 0; background: #f7f9fc; color: #333; line-height: 1.7; }
-    header { background: linear-gradient(135deg, #0b3d91 0%, #2a6fdb 100%); color: #ffffff; padding: 40px 20px; text-align: center; border-bottom: 8px solid #a3c4ff; }
-    section { max-width: 900px; margin: 20px auto; padding: 30px; background: #ffffff; border-radius: 12px; box-shadow: 0 6px 16px rgba(0,0,0,0.08); }
-    h1, h2, h3 { color: #0b3d91; margin-bottom: 12px; }
-    h1 { font-size: 2.5rem; font-weight: 700; }
-    h2 { font-size: 2rem; border-bottom: 3px solid #e0eaf6; padding-bottom: 8px; margin-top: 30px; }
-    h3 { font-size: 1.5rem; color: #2a6fdb; margin-top: 25px; }
-    p, li, td, th { font-size: 1rem; }
-    ul, ol { padding-left: 25px; margin-bottom: 20px; }
-    li { margin-bottom: 8px; }
-    table { width: 100%; border-collapse: separate; border-spacing: 0; margin: 20px 0; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
-    th, td { border: 1px solid #e0eaf6; padding: 15px; text-align: left; }
-    th { background: #0b3d91; color: #fff; font-weight: 500; }
-    td { background: #fcfcfc; }
-    .highlight { background-color: #f0f8ff; padding: 10px; border-radius: 6px; border-left: 5px solid #2a6fdb; margin: 15px 0; }
-    a { color: #0b3d91; text-decoration: none; transition: color 0.3s ease; }
-    a:hover { text-decoration: underline; color: #2a6fdb; }
-    .btn-cta {
-      display: inline-block;
-      padding: 16px 35px;
-      background: #4CAF50; /* Green color for action */
-      color: #fff;
-      font-weight: 700;
-      border: none;
-      border-radius: 30px;
-      box-shadow: 0 6px 10px rgba(76, 175, 80, 0.3);
-      transition: background-color 0.3s ease, transform 0.2s ease;
-      cursor: pointer;
-      text-decoration: none;
-      text-align: center;
-      margin-top: 20px;
+        /* 헤더 스타일 */
+        header {
+            background-color: #ffffff;
+            border-bottom: 1px solid #e0e0e0;
+            padding: 20px 0;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+        }
+
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h1 a {
+            font-size: 28px;
+            color: #1a73e8; /* 메인 브랜드 색상 */
+            text-decoration: none;
+            font-weight: 700;
+        }
+
+        /* 메인 콘텐츠 영역 */
+        main {
+            padding-bottom: 40px;
+        }
+
+        /* 히어로 섹션 (가장 눈에 띄는 부분) */
+        .hero {
+            background-color: #e3f2fd; /* 부드러운 파란색 배경 */
+            padding: 60px 0;
+            text-align: center;
+            border-radius: 8px;
+            margin-bottom: 30px;
+        }
+
+        .hero h1 {
+            font-size: 36px;
+            color: #1a73e8;
+            margin-bottom: 10px;
+            line-height: 1.3;
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: #555;
+            margin-bottom: 25px;
+        }
+
+        /* 견적 비교 폼 스타일 */
+        .compare-form-box {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: left;
+        }
+
+        .compare-form-box h2 {
+            font-size: 24px;
+            color: #1a73e8;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .compare-form-box p {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 15px;
+            color: #666;
+        }
+
+        .form-group {
+            display: flex;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+            gap: 20px;
+        }
+
+        .form-group > div {
+            flex-grow: 1;
+            min-width: calc(50% - 10px);
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 700;
+            color: #444;
+            font-size: 14px;
+        }
+
+        .form-group input, .form-group select, .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 15px;
+            transition: border-color 0.3s;
+        }
+
+        .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+            border-color: #1a73e8;
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(26, 115, 232, 0.2);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+        }
+
+        .cta-btn {
+            background-color: #1a73e8;
+            color: white;
+            padding: 15px 20px;
+            border: none;
+            border-radius: 8px;
+            font-size: 18px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+
+        .cta-btn:hover {
+            background-color: #1565c0;
+            transform: translateY(-2px);
+        }
+
+        .full-width {
+            width: 100%;
+        }
+
+        /* 콘텐츠 섹션 스타일 */
+        .content-section {
+            background-color: #ffffff;
+            padding: 40px 0;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+        }
+
+        .content-section h2 {
+            font-size: 28px;
+            color: #1a73e8;
+            margin-bottom: 20px;
+            border-left: 5px solid #1a73e8;
+            padding-left: 10px;
+        }
+
+        .content-section h3 {
+            font-size: 22px;
+            color: #333;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 5px;
+        }
+
+        .content-section p {
+            font-size: 16px;
+            color: #555;
+            margin-bottom: 15px;
+            line-height: 1.7;
+        }
+
+        .content-section ul {
+            list-style-type: disc;
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+
+        .content-section li {
+            font-size: 16px;
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 8px;
+        }
+
+        /* 키워드 리스트 스타일 */
+        .keyword-list {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            padding: 0;
+        }
+
+        .keyword-list li {
+            background-color: #e0f2f1; /* 연한 민트색 */
+            color: #00796b;
+            padding: 8px 15px;
+            border-radius: 20px;
+            margin-right: 10px;
+            margin-bottom: 10px;
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        /* 테이블 스타일 */
+        .table-container {
+            overflow-x: auto;
+            margin-bottom: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+            background-color: #ffffff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+        }
+
+        table th, table td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+            font-size: 15px;
+        }
+
+        table th {
+            background-color: #f1f8e9; /* 부드러운 초록색 계열 */
+            color: #333;
+            font-weight: 700;
+            white-space: nowrap;
+        }
+
+        table tr:last-child td {
+            border-bottom: none;
+        }
+
+        table tbody tr:hover {
+            background-color: #f5f5f5;
+        }
+
+        .highlight {
+            font-weight: 700;
+            color: #e53935; /* 강조 색상 */
+        }
+
+        /* FAQ 스타일 */
+        .faq-item {
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            background-color: #fcfcfc;
+            overflow: hidden;
+        }
+
+        .faq-item h3 {
+            font-size: 18px;
+            color: #333;
+            padding: 15px;
+            margin: 0;
+            cursor: pointer;
+            position: relative;
+            background-color: #f9f9f9;
+            transition: background-color 0.3s;
+        }
+
+        .faq-item h3:hover {
+            background-color: #f0f0f0;
+        }
+
+        .faq-item h3:after {
+            content: '+';
+            font-size: 20px;
+            position: absolute;
+            right: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            transition: transform 0.3s;
+        }
+
+        .faq-item.active h3:after {
+            content: '-';
+            transform: translateY(-50%) rotate(0deg);
+        }
+
+        .faq-item p {
+            padding: 0 15px 15px 15px;
+            margin: 0;
+            font-size: 15px;
+            color: #666;
+            display: none; /* 초기 상태 숨김 */
+        }
+
+        .faq-item.active p {
+            display: block; /* 활성화 시 보이기 */
+        }
+
+        /* 그래프 스타일 (텍스트 기반) */
+        .graph-container pre {
+            background-color: #f4f4f4;
+            padding: 15px;
+            border-radius: 8px;
+            font-family: monospace;
+            font-size: 14px;
+            overflow-x: auto;
+            color: #333;
+        }
+
+        /* 외부 링크 섹션 */
+        .ext-link-section ul {
+            list-style-type: none;
+            margin-left: 0;
+            padding: 0;
+        }
+
+        .ext-link-section li {
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .ext-link-section a {
+            color: #1a73e8;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .ext-link-section a:hover {
+            text-decoration: underline;
+        }
+
+        /* 풋터 스타일 */
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 30px 0;
+            text-align: center;
+            font-size: 14px;
+            margin-top: 40px;
+        }
+
+        footer p {
+            margin: 5px 0;
+        }
+
+        /* 미디어 쿼리 (반응형 디자인) */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 28px;
+            }
+            .compare-form-box {
+                padding: 20px;
+            }
+            .form-group > div {
+                min-width: 100%;
+            }
+            table th, table td {
+                padding: 10px;
+                font-size: 14px;
+            }
+        }
+    </style>
+
+    <!-- JSON-LD 구조화 데이터 -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "경차보험료를 결정하는 주요 기준은 무엇인가요?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "경차보험료는 차량의 모델(모닝, 스파크, 레이 등), 운전자 연령(만 20세/26세/30세 등), 운전 경력, 사고 이력, 운전자 범위(1인/부부 한정), 담보 범위(대인/대물/자차), 그리고 블랙박스나 마일리지 특약 등의 할인 항목 적용 여부에 따라 복합적으로 결정됩니다. 특히 경차의 특성상 낮은 배기량으로 인해 차량가액이 낮아 자차 보험료가 저렴한 편이지만, 운전자 특성에 따라 보험료 편차가 큽니다."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "경차보험료를 가장 저렴하게 산출하는 방법은 무엇인가요?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "가장 효과적인 방법은 다이렉트 보험 비교견적을 통해 여러 보험사의 상품을 동시에 비교하는 것입니다. 또한, 주행 거리가 짧다면 마일리지 특약(최대 30% 할인), 안전 운전 습관에 따른 안전운전 특약, 블랙박스 설치 할인, 그리고 운전자 범위를 최소화하는(1인 한정 등) 특약을 활용하면 추가적인 비용 절감이 가능합니다. 매년 갱신 시점에는 반드시 여러 업체의 견적을 재확인해야 합니다."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "경차보험료 신규 가입 시 혜택과 주의할 점은 무엇인가요?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "신규 가입자는 운전 경력이 짧아 보험료가 비싸게 책정될 수 있습니다. 이때, 가족 중 보험 가입 경력이 있는 분의 경력을 인정받는 '운전 경력 인정제'를 활용하면 보험료 할인을 받을 수 있습니다. 또한, '다이렉트 보험'으로 가입하면 설계사를 통한 가입 대비 평균 15% 이상 저렴하며, 일부 보험사는 신규 가입자에게 상품권이나 주유권 등의 사은품을 제공하기도 합니다. 계약서 상의 자기부담금 및 긴급출동 서비스 범위를 꼼꼼히 확인해야 합니다."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "2026년 경차보험료의 주요 변동 요인은 무엇인가요?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "2026년에는 보험료 산출 시스템의 고도화와 함께 차량 모델별 사고율 통계가 더욱 세분화될 것으로 예측됩니다. 특히 경차의 경우, 안전장치(ADAS) 장착 여부에 따른 보험료 할인 폭 확대와 더불어, 물가 상승에 따른 정비 수가 증가로 인해 기본 보험료가 소폭 상승할 가능성이 있습니다. 또한, 다이렉트 보험의 경쟁 심화로 인해 저렴한 보험료 견적을 찾기가 더 쉬워질 것으로 예상됩니다."
+          }
+        }
+      ]
     }
-    .btn-cta:hover {
-      background: #45a049;
-      transform: translateY(-2px);
-    }
-    /* 내부 링크용 앵커 */
-    .anchor { display: block; position: relative; top: -100px; visibility: hidden; }
-    /* 견적 폼 스타일링 */
-    .form-group { margin-bottom: 20px; }
-    .form-group label { display: block; margin-bottom: 8px; font-weight: 500; color: #0b3d91; }
-    .form-group input[type="text"], .form-group input[type="tel"], .form-group select, .form-group textarea {
-      width: calc(100% - 20px);
-      padding: 10px;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-      box-sizing: border-box;
-    }
-    .form-group select { appearance: none; background: #fff url("data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20d%3D%22M7%2010l5%205%205-5z%22%2F%3E%3C%2Fsvg%3E") no-repeat right 10px center; background-size: 16px; }
-    /* 반응형 */
-    @media(max-width: 600px) {
-      body { padding: 10px; }
-      header { padding: 30px 15px; }
-      section { margin: 10px auto; padding: 20px; }
-      h1 { font-size: 2rem; }
-      h2 { font-size: 1.6rem; }
-      h3 { font-size: 1.3rem; }
-      .btn-cta { width: 100%; padding: 15px 0; }
-      table, th, td { font-size: 0.9rem; padding: 10px; }
-    }
-  </style>
+    </script>
 </head>
 
 <body>
-  <header>
-    <h1>2026년 경차 자동차 보험료 비교 가이드</h1>
-    <p>모닝, 캐스퍼, 레이, 스파크 등 경차 모델별 최저가 견적 &amp; 할인 팁 대방출</p>
-    <a class="btn-cta" href="#contact">지금 바로 최저가 보험료 견적 받기</a>
-  </header>
+    <header>
+        <div class="container">
+            <h1><a href="/">전국 최저가 경차보험료 비교 센터</a></h1>
+        </div>
+    </header>
 
-  <section id="table-of-contents">
-    <h2>목차: 현명한 경차 보험 선택을 위한 핵심 정보</h2>
-    <nav aria-label="페이지 내 이동">
-      <ol>
-        <li><a href="#intro">경차 보험, 왜 일반차와 다르게 봐야 하는가?</a></li>
-        <li><a href="#factors">경차 보험료에 영향을 미치는 핵심 요소 분석</a></li>
-        <li><a href="#models-comparison">2026년 경차 모델별 보험료 비교 (모닝, 캐스퍼, 레이)</a></li>
-        <li><a href="#discounts">경차 보험료 할인 혜택 200% 활용 전략</a></li>
-        <li><a href="#comparison-method">다이렉트 보험 vs. 설계사 비교 가입 방법</a></li>
-        <li><a href="#faq">자주 묻는 질문 (FAQ)</a></li>
-      </ol>
-    </nav>
-  </section>
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1>💰 2026년 경차보험료, 평균 15% 이상 절약하기!</h1>
+                <p>쉐보레 스파크, 기아 모닝/레이, 현대 캐스퍼 등 모든 경차 모델의 최저가 보험료를 지금 바로 비교해보세요. <br>다이렉트 할인 혜택, 마일리지 특약, 운전자 한정 특약까지 전문가가 맞춤형으로 찾아드립니다.</p>
+                
+                <div class="compare-form-box">
+                    <h2>간편 경차보험료 무료 견적 요청 (실시간 비교)</h2>
+                    <p>상세 정보를 입력하여 최대 5개 이상의 보험사 견적을 1분 만에 비교하고, 경차보험료 절약 혜택을 확인하세요.</p>
+                    <form action="#" method="post">
+                        <div class="form-group">
+                            <div>
+                                <label for="car-model">경차 차종 선택 (필수)</label>
+                                <select id="car-model" name="car_model" required>
+                                    <option value="">-- 경차 모델 선택 --</option>
+                                    <option value="기아 모닝">기아 모닝 (Morning)</option>
+                                    <option value="기아 레이">기아 레이 (Ray)</option>
+                                    <option value="쉐보레 스파크">쉐보레 스파크 (Spark)</option>
+                                    <option value="현대 캐스퍼">현대 캐스퍼 (Casper)</option>
+                                    <option value="기아 뉴모닝">기아 뉴모닝</option>
+                                    <option value="대우 마티즈">대우 마티즈 (Matiz)</option>
+                                    <option value="대우 티코">대우 티코 (Tico)</option>
+                                    <option value="현대 아토스">현대 아토스 (Atos)</option>
+                                    <option value="기아 비스토">기아 비스토 (Visto)</option>
+                                    <option value="기아 모닝 어반">기아 모닝 어반</option>
+                                    <option value="기아 레이 EV">기아 레이 EV</option>
+                                    <option value="기타 경차 모델">기타 경차 모델</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="car-year">차량 연식 (등록일 기준)</label>
+                                <input type="number" id="car-year" name="car_year" placeholder="예: 2023" min="1991" max="2026" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <div>
+                                <label for="driver-age">운전자 연령 (만 나이)</label>
+                                <select id="driver-age" name="driver_age" required>
+                                    <option value="">-- 운전자 연령 선택 --</option>
+                                    <option value="20">만 20세~25세 (초보 운전자)</option>
+                                    <option value="26">만 26세~30세</option>
+                                    <option value="30">만 30세~35세</option>
+                                    <option value="36">만 36세~40세</option>
+                                    <option value="41">만 41세~50세</option>
+                                    <option value="51">만 51세 이상</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="driver-range">운전자 범위 특약</label>
+                                <select id="driver-range" name="driver_range" required>
+                                    <option value="1인 한정">1인 한정</option>
+                                    <option value="부부 한정">부부 한정</option>
+                                    <option value="가족 한정">가족 한정</option>
+                                    <option value="누구나 운전">누구나 운전</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <div>
+                                <label for="accident-history">최근 3년 내 사고 이력 (유/무)</label>
+                                <select id="accident-history" name="accident_history" required>
+                                    <option value="없음">없음</option>
+                                    <option value="있음">있음 (1건 이상)</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="coverage-type">가입 희망 담보</label>
+                                <select id="coverage-type" name="coverage_type" required>
+                                    <option value="책임보험+자차포함">책임보험 + 자차 포함 (종합보험)</option>
+                                    <option value="책임보험만">책임보험만 (의무가입)</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <div>
+                                <label for="name">이름</label>
+                                <input type="text" id="name" name="name" placeholder="이름을 입력하세요" required>
+                            </div>
+                            <div>
+                                <label for="phone">연락처</label>
+                                <input type="tel" id="phone" name="phone" placeholder="휴대폰 번호를 입력하세요" required>
+                            </div>
+                        </div>
 
-  <section id="intro">
-    <span id="intro-anchor" class="anchor"></span>
-    <h2>1. 경차 보험, 왜 일반차와 다르게 봐야 하는가?</h2>
-    <p class="highlight">경차는 대한민국 법규상 배기량 1,000cc 미만(길이 3.6m, 너비 1.6m 이하)의 차량을 의미합니다. 2026년 현재 경차는 단순히 저렴한 차량을 넘어, 세제 혜택과 유지비 절감이라는 강력한 경제적 이점을 제공합니다. 특히 경차 보험료는 이러한 유지비의 핵심 축을 담당하며, 일반 승용차와는 다른 산출 기준과 할인율이 적용될 수 있습니다.</p>
-    <p>많은 운전자들이 "경차니까 보험료도 무조건 싸겠지?"라고 생각하지만, 실제로는 그렇지 않습니다. 경차의 차량 가격이 상대적으로 낮아 자기차량손해(자차) 보험료는 저렴할 수 있지만, 초보 운전자가 많은 경차의 특성상 사고 발생률이 높게 책정되어 전체 보험료는 예상보다 높게 나올 수 있습니다. 또한 경차의 특성상 사고 시 수리비가 높게 산정되는 경우가 많아 보험사 손해율에 따라 보험료가 달라집니다.</p>
+                        <button type="submit" class="cta-btn full-width" style="margin-top: 15px;">나의 경차보험료 최저가 비교 견적 받기</button>
+                    </form>
+                </div>
+            </div>
+        </section>
 
-    <h3>1-1. 경차 소유의 경제적 장점과 단점 (2026년 기준)</h3>
-    <ul>
-      <li><strong>장점:</strong>
-        <ul>
-          <li><strong>세금 감면:</strong> 2026년 기준 취득세 감면 혜택이 유지되며, 연간 자동차세가 10만 원 미만으로 매우 저렴합니다.</li>
-          <li><strong>유지비 절감:</strong> 유류비 환급(경차사랑카드 이용 시) 및 공영 주차장/고속도로 통행료 할인 혜택이 제공됩니다.</li>
-          <li><strong>운전 편의성:</strong> 좁은 주차 공간과 복잡한 도심 환경에서 높은 기동성을 가집니다.</li>
-        </ul>
-      </li>
-      <li><strong>단점:</strong>
-        <ul>
-          <li><strong>안전성 문제:</strong> 상대적으로 차체가 작아 대형차와의 사고 시 운전자에게 더 큰 위험이 발생할 수 있습니다.</li>
-          <li><strong>보험료 변동성:</strong> 초보 운전자가 많아 보험사의 손해율이 높게 책정되어 일반 승용차 대비 보험료가 더 높을 수 있습니다.</li>
-          <li><strong>재판매 가격 (감가상각):</strong> 신차 출고 후 가치 하락률이 높습니다.</li>
-        </ul>
-      </li>
-    </ul>
-  </section>
+        <section class="content-section">
+            <div class="container">
+                <h2>🔎 경차보험료, 왜 비교해야 저렴해질까요?</h2>
+                <p><strong>경차보험료</strong>는 일반 차량 보험료에 비해 차량가액이 낮아 자차 보험료가 저렴한 장점이 있지만, 운전자의 조건에 따라 보험사별 가격 차이가 크게 벌어질 수 있습니다. 특히 경차 운전자들은 보험료 할증에 민감할 수밖에 없는데, 다이렉트 보험을 통해 <span class="highlight">경차보험료 비교</span>를 진행하면 중간 수수료 없이 <span class="highlight">최소 10%에서 최대 30%까지 저렴한 금액</span>으로 가입이 가능합니다. 단순히 싼 곳만 찾는 것보다 나의 운전 조건에 맞는 최적의 보험 상품을 찾아야 합니다.</p>
 
-  <section id="factors">
-    <span id="factors-anchor" class="anchor"></span>
-    <h2>2. 경차 보험료에 영향을 미치는 핵심 요소 분석</h2>
-    <p>경차 보험료 견적을 정확하게 산출하려면 '차량 요율'과 '운전자 요율'이라는 두 가지 핵심 요소를 이해해야 합니다. 경차의 경우 차량 자체의 보험료는 낮지만, 운전자의 조건에 따라 보험료가 천차만별로 달라질 수 있습니다. 특히 2026년에는 운전 습관 기반 보험(UBI)의 중요성이 더욱 커지고 있습니다.</p>
+                <h3>경차보험료 산출의 세 가지 핵심 기준</h3>
+                <ul>
+                    <li><strong>운전자 특성 (Driver Characteristics):</strong> 운전자의 나이(만 26세 미만은 특히 비쌈), 운전 경력(초보 운전자는 할증), 운전자 범위(1인 vs 부부), 사고 이력(3년 내 사고 건수 및 금액)이 보험료의 기본이 됩니다. 경차는 초보 운전자가 많이 이용하므로, 이 부분이 <span class="highlight">경차보험료</span>에 가장 큰 영향을 미칩니다.</li>
+                    <li><strong>차량 특성 (Vehicle Characteristics):</strong> 차량 모델(모닝, 스파크, 레이), 연식(오래될수록 자차보험료는 하락), 옵션(첨단 안전장치 ADAS 유무), 연간 주행거리(마일리지 특약 적용) 등 차량 자체의 위험률이 반영됩니다.</li>
+                    <li><strong>담보 및 특약 (Coverage &amp; Endorsements):</strong> 의무 가입인 책임보험 외에 대물, 자기차량손해(자차), 자기신체사고(자손) 또는 자동차상해(자상) 등 보장 범위에 따라 <span class="highlight">경차보험료 견적</span>이 달라집니다. 특히, 자차 가입 시 자기부담금 설정에 따라 보험료 차이가 발생합니다.</li>
+                </ul>
+                
+                <h3 style="margin-top:50px;">함께 많이 찾는 경차보험료 연관 키워드</h3>
+                <ul class="keyword-list">
+                    <li>#경차보험료</li>
+                    <li>#경차자동차보험비교견적</li>
+                    <li>#경차보험료평균</li>
+                    <li>#경차보험료저렴한곳</li>
+                    <li>#스파크보험료</li>
+                    <li>#모닝보험료</li>
+                    <li>#레이보험료</li>
+                    <li>#캐스퍼보험료</li>
+                    <li>#경차보험료할인팁</li>
+                    <li>#경차운전자보험</li>
+                    <li>#초보운전자경차보험료</li>
+                    <li>#다이렉트자동차보험</li>
+                    <li>#마일리지특약</li>
+                    <li>#보험료할증기준</li>
+                    <li>#경차보험료순위</li>
+                    <li>#2026보험료예상</li>
+                    <li>#신규가입혜택</li>
+                    <li>#자차보험료계산</li>
+                </ul>
+            </div>
+        </section>
 
-    <h3>2-1. 차량 요율: 경차 모델별 차이점</h3>
-    <p>경차 모델별로 보험료가 다르게 책정되는 이유는 차량의 안전성, 부품 가격, 그리고 사고 발생 시 손해율 통계 때문입니다. 예를 들어, <span class="keyword">모닝</span>과 <span class="keyword">캐스퍼</span>, <span class="keyword">레이</span> 중 어떤 모델이 더 많은 할인을 받는지에 대한 궁금증은 단순히 차량 가격으로만 판단할 수 없습니다.</p>
-    <ul>
-      <li><strong>안전장치(ADAS) 장착 여부:</strong> 전방충돌 방지 보조(FCA), 차로 이탈 방지 보조(LKA)와 같은 첨단 안전장치가 장착된 차량은 보험료 할인 대상이 됩니다. 최근 출시된 <span class="keyword">캐스퍼</span> 모델은 이러한 첨단 사양이 기본 적용되어 초보 운전자에게 특히 유리한 <span class="keyword">할인 혜택</span>을 제공합니다.</li>
-      <li><strong>부품 가격 및 수리비:</strong> 경차는 사고 시 작은 충격에도 주요 부품 교체가 필요할 수 있습니다. 특정 모델의 부품 가격이 높거나 수리가 까다로운 경우 보험사 손해율이 높아져 보험료가 상승할 수 있습니다.</li>
-      <li><strong>차량 연식:</strong> 차량 연식이 오래될수록 차량 가액이 낮아져 자차 보험료가 감소합니다. 반면, 신차인 <span class="keyword">캐스퍼</span>와 <span class="keyword">레이</span> 모델은 차량 가액이 높아 초기 보험료가 높을 수 있습니다.</li>
-    </ul>
+        <section class="content-section">
+            <div class="container">
+                <h2>📊 경차 모델별 보험료 특징 및 할인 혜택 비교 (2026년 기준)</h2>
+                <p>경차는 차종별로 사고율과 정비 비용에 차이가 있어 보험사별로 책정되는 보험료가 다릅니다. 특히 신형 모델인 <span class="highlight">현대 캐스퍼</span>와 꾸준한 인기를 얻고 있는 <span class="highlight">기아 모닝</span>, 그리고 실용성 높은 <span class="highlight">기아 레이</span>는 보험료 산정 기준이 조금씩 다릅니다. 아래 표를 통해 주요 경차 모델의 보험료 특징을 확인하고, 보험료 절약을 위한 전략을 세워보세요.</p>
+                
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>구분</th>
+                                <th>기아 모닝 (Morning)</th>
+                                <th>쉐보레 스파크 (Spark)</th>
+                                <th>기아 레이 (Ray)</th>
+                                <th>현대 캐스퍼 (Casper)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>인기 및 특징</strong></td>
+                                <td>가장 보편적인 모델, 중고차 거래 활발</td>
+                                <td>단종되었으나 중고차 시장에서 인기, 안정성 평가 양호</td>
+                                <td>경차 유틸리티, 넓은 실내 공간, 높은 중고차 가격 방어율</td>
+                                <td>가장 최신 모델, SUV 스타일, ADAS 옵션 강점</td>
+                            </tr>
+                            <tr>
+                                <td><strong>보험료 예측 (2026)</strong></td>
+                                <td>평균적인 경차보험료. 경쟁 심화로 비교 시 할인 폭 큼.</td>
+                                <td>모델별 안전장치 유무에 따라 편차 큼. 연식에 따른 보험료 하락.</td>
+                                <td>차량가액이 높아 상대적으로 자차보험료가 높을 수 있음.</td>
+                                <td>첨단 안전장치 할인이 적용되어 신차 보험료 대비 저렴할 수 있음.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>주요 할인 팁</strong></td>
+                                <td colspan="4">블랙박스 할인 (모든 모델), 마일리지 특약, 운전자 한정 특약, 안전운전 특약 (티맵/카카오내비 연동) 등 공통 적용</td>
+                            </tr>
+                            <tr>
+                                <td><strong>비교 시 유의점</strong></td>
+                                <td>보험사별 프로모션 확인</td>
+                                <td>중고차 가액 기준 확인</td>
+                                <td>운전자 범위 설정 신중</td>
+                                <td>ADAS 할인 적용 여부 필수 확인</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
 
-    <h3>2-2. 운전자 요율: 연령, 경력, 사고 이력</h3>
-    <p>경차 보험료 <span class="keyword">견적</span>에서 가장 큰 비중을 차지하는 것은 운전자의 조건입니다. 2026년 보험료 산정 기준으로 볼 때, <span class="keyword">20대</span>, <span class="keyword">30대</span>, <span class="keyword">40대</span> 운전자별 보험료 차이는 상당합니다. 특히 <span class="keyword">20대</span> 초반 운전자(21~23세)는 사고 발생 확률이 높아 보험료가 매우 높게 책정될 수 있습니다.</p>
-    <div class="highlight">
-      <strong>운전 경력 인정:</strong> 군 운전병 경력, 회사 운전직 경력, 외국 보험 가입 경력 등을 증명하면 보험 <span class="keyword">가입</span> 경력으로 인정받아 초기 보험료 부담을 크게 줄일 수 있습니다. 신차를 구매하는 <span class="keyword">초보 운전자</span>라면 반드시 경력 인정 항목을 확인해야 합니다.
-    </div>
-  </section>
+                <h3>2026년 경차보험료 변동 주요 요인 예측</h3>
+                <p>전문가들은 2026년 자동차보험 시장에서 <span class="highlight">경차보험료</span>의 변동 폭이 더 커질 것으로 예측하고 있습니다. 주된 요인은 인플레이션에 따른 정비 수가 상승으로 기본 보험료가 소폭 오르는 반면, 다이렉트 보험 시장의 경쟁 심화와 첨단 안전장치(ADAS) 장착률 증가로 인한 할인 폭이 확대될 것이기 때문입니다. 특히, 마일리지 특약의 경우 주행 거리가 짧은 경차 운전자에게 더욱 유리한 조건으로 변경될 가능성도 높습니다. 이는 결국 <span class="highlight">신규 가입자</span>와 <span class="highlight">갱신자</span> 모두에게 꼼꼼한 비교 견적이 필수임을 의미합니다.</p>
 
-  <section id="models-comparison">
-    <span id="models-comparison-anchor" class="anchor"></span>
-    <h2>3. 2026년 경차 모델별 보험료 비교 (모닝, 캐스퍼, 레이)</h2>
-    <p>경차를 구매할 때 가장 많이 고려하는 세 가지 모델인 <span class="keyword">모닝</span>, <span class="keyword">캐스퍼</span>, <span class="keyword">레이</span>의 <span class="keyword">평균 보험료</span>를 비교해 보겠습니다. 아래 표는 2026년 초보 운전자(만 30세, 최초 가입 기준, 1인 한정)를 가정한 <span class="keyword">예상 비용</span>이며, 보험사별 <span class="keyword">차이점</span>이 발생할 수 있으므로 참고용으로 활용하시기 바랍니다.</p>
+                <div class="graph-container">
+                    <h4>2026년 경차보험료 변동 예측 (Text Graph)</h4>
+                    <pre>
+요인별 예상 경차보험료 영향 (2026년 상반기 기준)
 
-    <h3>3-1. 경차 모델별 평균 보험료 및 특징 비교표 (2026년 기준)</h3>
-    <table>
-      <thead>
-        <tr>
-          <th>차종</th>
-          <th>2026년 예상 보험료<br />(만 30세, 최초 가입 기준)</th>
-          <th>차량 특징</th>
-          <th>주요 타겟 (장점)</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>현대 캐스퍼</td>
-          <td>₩700,000 ~ ₩850,000</td>
-          <td>SUV 스타일의 경차, 높은 안전 사양 기본 적용 (ADAS), 터보 옵션</td>
-          <td>젊은층, 초보 운전자, 디자인과 안전성을 중시하는 소비자</td>
-        </tr>
-        <tr>
-          <td>기아 모닝</td>
-          <td>₩800,000 ~ ₩950,000</td>
-          <td>가장 저렴한 초기 구매 가격, 높은 연비, 경차 시장 최장수 모델</td>
-          <td>경제성 최우선, 출퇴근 용도, 유지비 절감을 원하는 소비자</td>
-        </tr>
-        <tr>
-          <td>기아 레이</td>
-          <td>₩900,000 ~ ₩1,100,000+</td>
-          <td>넓은 실내 공간, 슬라이딩 도어, 높은 공간 활용도 (캠핑/레저 적합)</td>
-          <td>공간 활용 중시, 가족용 서브 차량, 레저 활동 선호 소비자</td>
-        </tr>
-      </tbody>
-    </table>
-    <p class="highlight"><strong>주의사항:</strong> <span class="keyword">레이</span> 모델은 박스카 형태의 구조적 특성으로 인해 사고 시 수리비가 높게 산정되어 보험료가 상대적으로 높을 수 있습니다. 반면 <span class="keyword">캐스퍼</span>는 비교적 최근에 출시된 모델로 첨단 안전장치 할인이 적용되어 <span class="keyword">모닝</span>이나 <span class="keyword">레이</span> 대비 보험료 <span class="keyword">장점</span>이 있을 수 있습니다.</p>
+- 차량 정비 수가 상승:  ++++++ (보험료 상승 압력)
+- 인건비 상승:          +++ (중간 수준 영향)
+- ADAS/블랙박스 할인:    ++++ (할인 폭 확대)
+- 다이렉트 보험 경쟁:   -------- (보험료 하락 압력, 소비자에게 유리)
+- 마일리지 특약 확대:   ++++ (할인율 증가)
+------------------------------------------------------
+전반적인 경차보험료: 소폭 상승 후 안정화/할인 혜택 증가 예상
+                    </pre>
+                </div>
 
-    <h3>3-2. 운전 경력별 보험료 차이 분석 (20대 vs. 40대)</h3>
-    <p>운전 경력은 보험료를 결정하는 가장 강력한 변수입니다. 특히 경차 운전자 중 20대 운전자가 많은 만큼, <span class="keyword">20대 보험료</span>는 <span class="keyword">40대 보험료</span> 대비 2배 이상 차이 날 수 있습니다. 무사고 경력 3년 이상인 운전자는 최고 60%까지 <span class="keyword">할인</span>이 가능합니다.</p>
-    <table>
-      <thead>
-        <tr>
-          <th>운전자 연령/경력</th>
-          <th>2026년 예상 보험료<br />(최초 가입, 1인 한정)</th>
-          <th>주요 할인/할증 요인</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>만 26~30세 (초보 운전자)</td>
-          <td>₩1,100,000 ~ ₩1,500,000</td>
-          <td>높은 위험률, 낮은 할인 등급 (가입 경력 1~3년 차)</td>
-        </tr>
-        <tr>
-          <td>만 38~42세 (경력 운전자)</td>
-          <td>₩700,000 ~ ₩900,000</td>
-          <td>낮은 위험률, 높은 할인 등급 (가입 경력 4년 차 이상)</td>
-        </tr>
-        <tr>
-          <td>만 50세 이상 (베테랑 운전자)</td>
-          <td>₩600,000 ~ ₩800,000</td>
-          <td>가장 낮은 위험률, 무사고 할인율 최대 적용</td>
-        </tr>
-      </tbody>
-    </table>
-    <p><strong>경차 보험료 싼곳 찾기:</strong> 보험사별로 통계치가 다르기 때문에, 같은 조건이라도 보험사별 <span class="keyword">견적</span> <span class="keyword">가격</span>이 수만 원에서 수십만 원까지 차이 날 수 있습니다. <span class="keyword">저렴한곳</span>을 찾으려면 다이렉트 보험 비교 사이트를 활용해 여러 보험사의 <span class="keyword">비교 견적</span>을 받아보는 것이 필수적입니다.</p>
-  </section>
+                <h3>경차보험료를 낮추는 운전자 맞춤 전략</h3>
+                <p>운전자의 나이와 경력에 따라 <span class="highlight">경차보험료</span>는 천차만별입니다. 특히, <span class="highlight">만 20세 초보 운전자</span>는 보험료가 매우 높게 책정되므로, 보험 가입 경력이 있는 부모님의 운전 경력을 인정받는 '운전 경력 인정제'를 활용하면 <span class="highlight">경차보험료 비용</span>을 크게 절약할 수 있습니다. 반면, <span class="highlight">만 30세 이상 운전자</span>는 비교적 안정적인 <span class="highlight">경차보험료 평균</span>을 기대할 수 있으나, 마일리지 특약과 블랙박스 할인(차량에 장착된 경우)을 적극적으로 활용하여 추가 할인을 받아야 합니다.</p>
+            </div>
+        </section>
 
-  <section id="discounts">
-    <span id="discounts-anchor" class="anchor"></span>
-    <h2>4. 경차 보험료 할인 혜택 200% 활용 전략 (2026년 최신 정보)</h2>
-    <p>경차 보험료 <span class="keyword">비용</span>을 줄이는 가장 확실한 방법은 보험사가 제공하는 다양한 <span class="keyword">할인 특약</span>을 놓치지 않고 적용하는 것입니다. 2026년에는 운전 습관 기반의 <span class="keyword">할인</span>이 대폭 확대되었습니다.</p>
+        <section class="content-section">
+            <div class="container">
+                <h2>🚘 경차 차종별 상세 보험료 분석 및 할인 키워드</h2>
+                <p>대한민국 경차 시장은 <span class="highlight">기아 모닝</span>, <span class="highlight">쉐보레 스파크</span>, <span class="highlight">기아 레이</span>, <span class="highlight">현대 캐스퍼</span>의 4강 체제로 운영되고 있습니다. 각 차종의 특성과 중고차 시장 상황에 따라 보험료가 다르게 산정됩니다. <span class="highlight">경차보험료</span>를 <span class="highlight">저렴한곳</span>에서 가입하기 위해서는 해당 차종의 특징을 이해하고 맞춤형 특약을 적용하는 것이 중요합니다.</p>
 
-    <h3>4-1. 마일리지(주행거리) 특약</h3>
-    <p>연간 주행거리가 짧은 경차 운전자에게 가장 유리한 <span class="keyword">할인 혜택</span>입니다. 보험사별로 주행거리 구간(예: 3,000km, 5,000km, 10,000km)에 따라 할인율이 달라집니다. <span class="keyword">출퇴근</span> 거리가 짧거나 주말에만 운전하는 경차 운전자는 반드시 이 특약을 활용해야 합니다.</p>
-    <ul>
-      <li><strong>할인율:</strong> 보험사 및 구간별로 다르지만, 연간 주행거리 1만km 이하 시 10~20% <span class="keyword">할인</span>이 일반적입니다.</li>
-      <li><strong>적용 방법:</strong> 가입 시점과 만기 시점의 차량 계기판 사진을 제출하거나, 커넥티드카 서비스 연동을 통해 자동 측정할 수 있습니다.</li>
-    </ul>
+                <h3>주요 경차 모델별 보험료 세부 분석</h3>
+                <ul>
+                    <li><strong>기아 모닝 (Morning) &amp; 뉴모닝:</strong> 국내에서 가장 많이 판매된 경차 모델로, 부품 수급이 용이하고 정비 비용이 저렴한 편입니다. <span class="highlight">모닝 보험료</span>는 연식이 오래된 모델이 많아 자차보험료는 낮지만, 운전자 연령에 따른 편차가 큽니다. 다이렉트 보험 비교견적으로 <span class="highlight">가입</span> 시 <span class="highlight">할인</span>율이 높은 편입니다.</li>
+                    <li><strong>현대 캐스퍼 (Casper):</strong> 최신 모델로, 출고 시 선택 가능한 '캐스퍼 액티브' 등 첨단 옵션이 많습니다. 이 옵션 중에는 ADAS(첨단 운전자 보조 시스템) 관련 항목이 포함되어 있어, 보험사마다 제공하는 <span class="highlight">안전장치 할인 혜택</span>을 꼼꼼히 확인하면 <span class="highlight">캐스퍼 보험료</span>를 크게 낮출 수 있습니다.</li>
+                    <li><strong>기아 레이 (Ray) &amp; 레이 EV:</strong> 박스형 디자인으로 실내 공간이 넓어 젊은 층이나 캠핑족에게 인기가 많습니다. <span class="highlight">레이 보험료</span>는 상대적으로 차량가액 방어율이 높아 신차의 경우 자차보험료가 높을 수 있습니다. <span class="highlight">레이 EV</span> 모델은 전기차 보험료 기준이 적용되며, 배터리 관련 보장이 중요합니다.</li>
+                    <li><strong>쉐보레 스파크 (Spark):</strong> 단종 후 중고차 시장에서 거래가 활발합니다. <span class="highlight">스파크 보험료</span>는 상대적으로 안전도가 높다는 평가를 받아 일부 보험사에서는 할인 혜택을 제공하기도 합니다. 중고차 가입 시에는 반드시 <span class="highlight">중고차보험료 견적</span>을 여러 곳에서 받아야 유리합니다.</li>
+                </ul>
 
-    <h3>4-2. 첨단 안전장치(ADAS) 및 블랙박스 할인</h3>
-    <p>경차에 블랙박스가 장착되어 있거나, 출고 시부터 첨단 안전장치(자동 비상 제동 장치, 차선 이탈 경고 장치 등)가 포함된 경우 <span class="keyword">할인</span>을 받을 수 있습니다.</p>
-    <ul>
-      <li><strong>블랙박스 할인:</strong> 대부분의 보험사가 2~5%의 <span class="keyword">할인</span>을 제공하며, <span class="keyword">경차</span>의 경우 사고 발생 시 증거 확보가 중요하므로 필수적으로 설치하는 것이 좋습니다.</li>
-      <li><strong>ADAS 할인:</strong> <span class="keyword">모닝</span>, <span class="keyword">캐스퍼</span>, <span class="keyword">레이</span> 등 최신 모델은 ADAS 기능을 선택할 수 있습니다. 2026년에는 ADAS 장착 여부에 따라 보험료 <span class="keyword">할인</span>율이 확대되는 추세입니다.</li>
-    </ul>
+                <h3>경차보험료 절약 전략: 특약 활용하기</h3>
+                <p>단순히 <span class="highlight">경차보험료</span> <span class="highlight">가격 비교</span>만으로는 충분한 절약 효과를 보기 어렵습니다. 경차 운전자에게 특히 유용한 특약들을 활용해야 합니다. <span class="highlight">마일리지 특약</span>은 연간 주행 거리에 따라 <span class="highlight">할인 혜택</span>을 제공하며, 경차는 주로 세컨드 카나 출퇴근용으로 주행 거리가 짧은 경우가 많아 <span class="highlight">경차보험료</span>를 <span class="highlight">절약</span>하는 데 가장 효과적입니다. 또한, '운전자 한정 특약'을 통해 운전자 범위를 좁히면 보험료가 크게 내려갑니다. <span class="highlight">신규 가입</span> 시에는 보험사별 <span class="highlight">상품</span>과 <span class="highlight">사은품</span> <span class="highlight">현금지원</span> <span class="highlight">이벤트</span>를 함께 확인하는 것도 좋습니다.</p>
+                
+                <p>이 외에도 <span class="highlight">경차보험료</span> <span class="highlight">비교</span> 시에는 <span class="highlight">자동차보험 갱신</span> 때마다 <span class="highlight">내돈내산</span> 후기를 참고하여 <span class="highlight">전문 업체</span>의 조언을 받아보는 것이 좋습니다. 특히, <span class="highlight">경차보험료 견적</span>은 보험사마다 <span class="highlight">평균</span> <span class="highlight">금액</span>의 차이가 크므로, <span class="highlight">비교</span>를 통해 <span class="highlight">가입</span> <span class="highlight">순위</span>를 확인하고 <span class="highlight">추천</span>을 받아보는 것이 현명한 소비입니다.</p>
+            </div>
+        </section>
 
-    <h3>4-3. 안전 운전 습관(UBI) 할인</h3>
-    <p>최근 보험업계의 트렌드인 UBI(Usage-Based Insurance)는 내비게이션 앱이나 보험사 앱을 통해 운전 습관을 측정하고, 안전운전 점수가 일정 기준 이상일 경우 <span class="keyword">할인</span>을 제공하는 제도입니다. 평소 급가속, 급감속, 과속 없이 운전하는 <span class="keyword">경차 운전자</span>라면 이 <span class="keyword">혜택</span>을 놓치지 마세요.</p>
+        <section class="content-section">
+            <div class="container">
+                <h2>💡 경차보험료 30% 절약을 위한 실용적인 팁</h2>
+                <p>경차 운전자라면 누구나 <span class="highlight">경차보험료</span>를 <span class="highlight">저렴하게</span> 가입하고 싶어 합니다. 아래 전문가들이 추천하는 2026년 경차보험료 절약 팁을 활용하여 불필요한 지출을 줄이세요.</p>
+                
+                <h3>1. 운전자 경력 우대 할인 특약 활용하기</h3>
+                <ul>
+                    <li><strong>가족 보험 경력 인정:</strong> 초보 운전자(만 26세 미만)의 경우 <span class="highlight">경차보험료</span>가 비쌉니다. 이때, 부모님이나 배우자의 보험 가입 경력을 인정받는 '운전 경력 인정제'를 활용하면 보험료 할인을 받을 수 있습니다.</li>
+                    <li><strong>군 운전 경력 인정:</strong> 군대에서 운전병으로 복무했거나 관용 차량 운전 경력이 있다면, 이를 증빙하여 보험 경력으로 인정받을 수 있습니다. 이는 <span class="highlight">경차보험료</span>를 낮추는 데 효과적입니다.</li>
+                </ul>
+                
+                <h3>2. 주행 거리에 따른 마일리지 특약 활용하기</h3>
+                <ul>
+                    <li><strong>경차에 가장 유리한 할인:</strong> 경차는 주로 세컨드 카나 시내 주행용으로 활용되어 주행 거리가 짧은 경우가 많습니다. <span class="highlight">마일리지 특약</span>은 연간 주행 거리에 따라 <span class="highlight">경차보험료</span>를 할인해주는 혜택으로, 1년에 1만km 이하로 운행한다면 반드시 가입해야 합니다.</li>
+                    <li><strong>선할인 vs 후할인:</strong> 보험사별로 선할인(가입 시 할인)과 후할인(만기 후 환급) 방식이 다릅니다. 본인의 주행 패턴을 고려하여 유리한 방식을 선택하세요.</li>
+                </ul>
+                
+                <h3>3. 안전장치 및 운전습관 할인 특약</h3>
+                <ul>
+                    <li><strong>블랙박스 할인:</strong> 차량에 블랙박스가 설치되어 있다면, 5% 내외의 <span class="highlight">경차보험료 할인</span> 혜택을 받을 수 있습니다. 가입 시 증빙 사진을 제출해야 합니다.</li>
+                    <li><strong>첨단 안전장치(ADAS) 할인:</strong> <span class="highlight">현대 캐스퍼</span>와 같이 ADAS 옵션(차선이탈경보, 전방추돌경보)을 장착한 경우, 보험사별로 3%~10%의 <span class="highlight">경차보험료 할인</span>이 적용됩니다.</li>
+                    <li><strong>안전운전 특약 (UBI):</strong> T맵이나 카카오내비와 연동하여 안전 운전 점수를 산정, 점수가 높으면 <span class="highlight">경차보험료 할인</span>을 해주는 특약입니다. 운전 습관에 자신이 있다면 필수적으로 가입해야 합니다.</li>
+                </ul>
+            </div>
+        </section>
 
-    <h3>4-4. 자녀 할인 특약</h3>
-    <p>태아 또는 만 6세 이하 자녀가 있는 운전자라면 보험사별로 제공하는 <span class="keyword">자녀 할인 특약</span>을 활용할 수 있습니다. 보험사별로 자녀 연령 기준 및 태아 포함 여부가 다를 수 있으므로 <span class="keyword">가입</span> 전 반드시 확인해야 합니다.</p>
-  </section>
+        <section class="content-section ext-link-section">
+            <div class="container">
+                <h2>🔗 신뢰할 수 있는 공인 외부 자료 및 참고 링크</h2>
+                <p>정확한 <span class="highlight">경차보험료</span> 산출 및 소비자 보호를 위해 관련 법규 및 공신력 있는 기관의 정보를 확인하세요.</p>
+                <ul>
+                    <li><a href="https://www.fss.or.kr/fss/main/index.jsp" target="_blank" rel="noopener noreferrer">금융감독원 (FSS)</a>: 금융 소비자 보호 및 보험 관련 분쟁 조정 정보 제공</li>
+                    <li><a href="https://www.kic.or.kr/main/index.do" target="_blank" rel="noopener noreferrer">보험개발원</a>: 자동차 보험료 산출 기준 및 보험 통계 정보 제공</li>
+                    <li><a href="https://www.kca.go.kr/index.do" target="_blank" rel="noopener noreferrer">한국소비자원 (KCA)</a>: 자동차 보험 관련 소비자 분쟁 사례 및 피해 예방 정보 제공</li>
+                    <li><a href="https://www.law.go.kr/lsInfoP.do?lsiSeq=144702&efYd=20240101#0000" target="_blank" rel="noopener noreferrer">자동차손해배상 보장법 (국가법령정보센터)</a>: 자동차 보험 의무 가입 기준 법적 근거 확인</li>
+                    <li><a href="https://namu.wiki/w/%EC%9E%90%EB%8F%99%EC%B0%A8%EB%B3%B4%ED%97%98" target="_blank" rel="noopener noreferrer">자동차보험 - 나무위키</a>: 자동차 보험의 기본 개념 및 특약 종류에 대한 일반 정보 제공</li>
+                </ul>
+            </div>
+        </section>
+        
+        <section class="content-section">
+            <div class="container">
+                <h2>❓ 자주 묻는 질문 (FAQ) - 경차보험료편</h2>
 
-  <section id="comparison-method">
-    <span id="comparison-method-anchor" class="anchor"></span>
-    <h2>5. 다이렉트 보험 vs. 설계사 비교 가입 방법 (가장 저렴한 곳 찾는 노하우)</h2>
-    <p>경차 보험료 <span class="keyword">견적</span>을 받을 때 가장 중요한 선택은 가입 채널입니다. <span class="keyword">다이렉트 보험</span>은 설계사 수수료가 없어 <span class="keyword">일반 보험</span> 대비 10~20%가량 <span class="keyword">저렴한</span> <span class="keyword">가격</span>에 가입할 수 있습니다. 경차 운전자들은 <span class="keyword">비용</span> 절감을 위해 <span class="keyword">다이렉트 보험</span>을 선호하는 경향이 있습니다.</p>
+                <div class="faq-item">
+                    <h3>경차보험료가 일반 승용차보다 무조건 저렴한가요?</h3>
+                    <p>경차는 차량가액이 낮아 자차 보험료(자기차량손해)가 일반 승용차보다 저렴한 것이 일반적입니다. 그러나 <span class="highlight">경차보험료</span>는 운전자의 연령, 운전 경력, 사고 이력 등 인적 요소에 의해 더 큰 영향을 받습니다. 특히 초보 운전자가 경차를 운전할 경우, 할증률이 높아 일반 중형차의 보험료와 비슷하거나 오히려 더 비싸게 책정될 수도 있습니다. 따라서 <span class="highlight">경차보험료 비교</span>는 필수입니다.</p>
+                </div>
 
-    <h3>5-1. 다이렉트 보험의 장점과 단점</h3>
-    <dl>
-      <dt>장점:</dt>
-      <dd>설계사 수수료가 제외되어 보험료가 <span class="keyword">저렴</span>합니다. 온라인에서 간편하게 <span class="keyword">견적</span> <span class="keyword">비교</span>가 가능하며, 24시간 언제든 <span class="keyword">가입</span>할 수 있습니다.</dd>
-      <dt>단점:</dt>
-      <dd>보험 상품 내용을 스스로 꼼꼼하게 확인해야 합니다. 사고 발생 시 설계사의 도움 없이 직접 보험사에 연락하여 처리해야 합니다.</dd>
-    </dl>
+                <div class="faq-item">
+                    <h3>경차보험료 견적을 받을 때 필요한 서류는 무엇인가요?</h3>
+                    <p>경차보험료 견적을 위해 특별히 서류가 필요하지는 않습니다. 다만, 정확한 견적 산출을 위해 차량 등록번호(차량 번호)와 소유자 이름, 운전자 생년월일, 운전 경력, 차량 모델 및 연식 등 기본 정보가 필요합니다. 신규 가입 시 운전 경력 인정제를 활용하려면, 기존 보험 가입자의 정보와 증빙 서류(가족관계증명서 등)가 추가로 요구될 수 있습니다.</p>
+                </div>
 
-    <h3>5-2. 경차 보험료 <span class="keyword">비교 견적</span> 팁 (보험사별 <span class="keyword">순위</span>)</h3>
-    <p>모든 보험사가 경차 보험료를 똑같이 책정하지 않습니다. 각 보험사의 손해율 통계, 주력 <span class="keyword">할인 특약</span>, 그리고 특정 차종에 대한 위험률 평가 기준이 다르기 때문입니다. <span class="keyword">저렴한곳</span>을 찾으려면 최소 3~4곳 이상의 보험사 <span class="keyword">견적</span>을 <span class="keyword">비교</span>해야 합니다.</p>
-    <ul>
-      <li><strong>주요 보험사:</strong> 삼성화재, 현대해상, KB손해보험, DB손해보험, AXA손해보험 등 국내 주요 손해보험사들은 경차 보험료 <span class="keyword">비교</span> <span class="keyword">가입</span> 시 <span class="keyword">견적</span>이 다릅니다.</li>
-      <li><strong><span class="keyword">비교</span> 사이트 활용:</strong> 보험다모아, 토스, 카카오페이 등 다양한 온라인 플랫폼에서 실시간 <span class="keyword">견적</span> <span class="keyword">비교</span> 서비스를 제공합니다.</li>
-    </ul>
+                <div class="faq-item">
+                    <h3>자차 보험료를 줄이기 위해 자기부담금을 높이는 것이 좋을까요?</h3>
+                    <p>경차의 경우 자차보험료(차량 수리 비용 보상)가 낮기 때문에 자기부담금을 높여 보험료를 절약하는 것이 현명할 수 있습니다. 자기부담금은 사고 시 운전자가 부담하는 최소 금액으로, 이를 높이면 보험사가 부담하는 금액이 줄어들어 <span class="highlight">경차보험료</span>가 내려갑니다. 다만, 사고 발생 시 본인 부담금이 커지므로 자신의 운전 습관과 재정 상황을 고려하여 결정해야 합니다.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3>신규 가입자가 경차보험료를 절약하는 가장 좋은 방법은 무엇인가요?</h3>
+                    <p>신규 가입자는 운전 경력이 없어 할증률이 높으므로, <span class="highlight">경차보험료</span>가 비쌉니다. 이때 가장 큰 할인 혜택을 받을 수 있는 방법은 '운전 경력 인정제'를 통해 가족의 보험 가입 경력을 인정받는 것입니다. 또한, 다이렉트 보험으로 가입하면 설계사 수수료가 절감되어 <span class="highlight">경차보험료</span>가 평균 15% 이상 저렴하며, <span class="highlight">신규 가입 혜택</span>으로 <span class="highlight">현금 지원</span>이나 <span class="highlight">사은품</span>을 제공하는 보험사를 찾는 것도 좋은 방법입니다.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3>경차보험료 비교견적 시 '가장 저렴한 곳' 순위가 고정되어 있나요?</h3>
+                    <p>아닙니다. <span class="highlight">경차보험료</span>는 보험사마다 '차량 모델별 손해율', '운전자 연령/경력 할인율', '특약 할인율' 등을 다르게 적용하기 때문에, 운전자의 조건에 따라 <span class="highlight">가장 저렴한 곳</span>의 <span class="highlight">순위</span>가 매번 바뀝니다. 따라서 매년 갱신 시점에는 반드시 최소 3개 이상의 보험사 견적을 받아 비교해야 <span class="highlight">최저가 경차보험료</span>를 찾을 수 있습니다.</p>
+                </div>
+            </div>
+        </section>
 
-    <h3>5-3. <span class="keyword">내돈내산</span> 후기 기반 <span class="keyword">추천</span>: 보장 범위 설정 팁</h3>
-    <p>경차 운전자에게 특히 중요한 보장 항목은 <span class="keyword">대물배상</span>입니다. 고가의 수입차와 사고가 날 경우 경차의 수리비는 낮더라도 상대방 차량의 수리비가 높게 청구될 수 있습니다. <span class="keyword">대물배상</span> 한도를 10억 원 이상으로 설정하는 것이 <span class="keyword">장점</span>이 많으며, 보험료 <span class="keyword">차이점</span>은 크지 않습니다.</p>
-    <div class="highlight">
-      <strong>TIP:</strong> 보험료 절감을 위해 <span class="keyword">자기부담금</span>을 높이거나 <span class="keyword">자차 보험</span>을 제외할 경우, 사고 발생 시 재정적 위험이 커질 수 있습니다. 경차라도 신차라면 <span class="keyword">자차 보험</span>은 필수이며, <span class="keyword">자기부담금</span>은 20만 원~30만 원 선에서 설정하는 것이 현명합니다.
-    </div>
-  </section>
+    </main>
 
-  <section id="faq">
-    <span id="faq-anchor" class="anchor"></span>
-    <h2>6. 자주 묻는 질문 (FAQ)</h2>
-    <dl>
-      <dt>Q1: 경차 <span class="keyword">보험료</span> <span class="keyword">평균</span> <span class="keyword">금액</span>은 <span class="keyword">얼마</span>인가요?</dt>
-      <dd>A: 경차 보험료 <span class="keyword">평균</span> <span class="keyword">금액</span>은 운전자의 나이, 경력, 사고 이력에 따라 크게 달라집니다. 일반적으로 경력 3년 이상의 40대 운전자는 연 60~80만 원, 20대 초보 운전자는 연 110~150만 원 수준이 <span class="keyword">예상</span>됩니다. 가장 정확한 <span class="keyword">견적</span>은 다이렉트 <span class="keyword">비교</span>를 통해 확인해야 합니다.</dd>
-      <dt>Q2: <span class="keyword">경차</span> <span class="keyword">보험료</span>가 일반 소형차보다 비쌀 수 있나요?</dt>
-      <dd>A: 네, 가능합니다. 경차는 차량 가액이 낮아 <span class="keyword">자차 보험료</span>는 저렴하지만, 경차 운전자의 사고율 통계가 높거나, 사고 시 수리비가 높게 책정되는 특정 모델의 경우 오히려 중형차보다 보험료가 높을 수 있습니다. 보험사별 <span class="keyword">차이점</span>을 확인해야 합니다.</dd>
-      <dt>Q3: <span class="keyword">경차</span> <span class="keyword">할인 혜택</span> 중 가장 효과적인 것은 무엇인가요?</dt>
-      <dd>A: 운행 거리가 짧다면 <span class="keyword">마일리지 특약</span>이 가장 효과적입니다. 또한 <span class="keyword">블랙박스 할인</span>과 <span class="keyword">첨단 안전장치 할인</span>(ADAS)을 동시에 적용하면 추가적인 <span class="keyword">할인</span> <span class="keyword">혜택</span>을 받을 수 있습니다.</dd>
-      <dt>Q4: <span class="keyword">경차 보험</span> <span class="keyword">가입</span> <span class="keyword">순위</span>가 높은 보험사를 <span class="keyword">추천</span>해 주세요.</dt>
-      <dd>A: <span class="keyword">경차 보험</span> <span class="keyword">순위</span>는 보험사마다 다릅니다. <span class="keyword">모닝</span>이나 <span class="keyword">레이</span> 등 특정 차종에 대한 손해율 통계가 낮은 보험사가 <span class="keyword">저렴한곳</span>이 될 수 있습니다. <span class="keyword">다이렉트 보험</span> <span class="keyword">비교</span> 사이트를 통해 실시간 <span class="keyword">순위</span>를 확인하고 <span class="keyword">가입</span>하는 것이 좋습니다.</dd>
-    </dl>
-  </section>
-
-  <section id="contact">
-    <span id="contact-anchor" class="anchor"></span>
-    <h2>7. 2026년 경차 보험료 무료 견적 상담</h2>
-    <p>나에게 가장 적합한 <span class="keyword">경차 보험료</span> <span class="keyword">견적</span>을 받아보세요. 아래 양식에 정보를 입력하시면, 여러 보험사의 <span class="keyword">가격</span> <span class="keyword">비교</span> 결과를 10분 이내에 확인할 수 있습니다.</p>
-
-    <form action="/submit-insurance-quote" method="POST" style="max-width:600px; margin:auto;">
-      <h3>1단계: 차량 정보 입력</h3>
-      <div class="form-group">
-        <label for="car-model">경차 모델 선택<span style="color:red;">*</span></label>
-        <select id="car-model" name="car_model" required>
-          <option value="">차종을 선택해 주세요</option>
-          <option value="캐스퍼">현대 캐스퍼</option>
-          <option value="모닝">기아 모닝</option>
-          <option value="레이">기아 레이</option>
-          <option value="스파크">쉐보레 스파크</option>
-          <option value="경형_화물차">기타 경형 화물차/밴</option>
-        </select>
-      </div>
-      <div class="form-group">
-        <label for="car-year">차량 연식 (출고연도)<span style="color:red;">*</span></label>
-        <input type="text" id="car-year" name="car_year" required placeholder="예: 2024년" pattern="[0-9]{4}년" />
-      </div>
-
-      <h3>2단계: 운전자 정보 입력</h3>
-      <div class="form-group">
-        <label for="driver-age">운전자 연령<span style="color:red;">*</span></label>
-        <select id="driver-age" name="driver_age" required>
-          <option value="">나이대를 선택해 주세요</option>
-          <option value="20대">만 20세~29세</option>
-          <option value="30대">만 30세~39세</option>
-          <option value="40대">만 40세~49세</option>
-          <option value="50대">만 50세~59세</option>
-          <option value="60대이상">만 60세 이상</option>
-        </select>
-      </div>
-      <div class="form-group">
-        <label for="driver-experience">운전 경력<span style="color:red;">*</span></label>
-        <select id="driver-experience" name="driver_experience" required>
-          <option value="">선택하세요</option>
-          <option value="최초가입">최초 가입 (0년)</option>
-          <option value="1년미만">1년 미만</option>
-          <option value="1~3년">1~3년</option>
-          <option value="3~5년">3~5년</option>
-          <option value="5년이상">5년 이상</option>
-        </select>
-      </div>
-
-      <h3>3단계: 추가 할인 혜택 확인</h3>
-      <div class="form-group">
-        <label for="mileage-discount">마일리지 특약 희망 여부</label>
-        <select id="mileage-discount" name="mileage_discount">
-          <option value="yes">연간 주행거리 1만km 이하 (할인 희망)</option>
-          <option value="no">연간 주행거리 1만km 초과 (할인 미희망)</option>
-        </select>
-      </div>
-      <div class="form-group">
-        <label for="child-discount">자녀 할인 특약 해당 여부</label>
-        <select id="child-discount" name="child_discount">
-          <option value="no">해당 없음</option>
-          <option value="yes">태아 또는 만 6세 이하 자녀 있음</option>
-        </select>
-      </div>
-
-      <h3>4단계: 연락처 및 최종 요청</h3>
-      <div class="form-group">
-        <label for="name">이름<span style="color:red;">*</span></label>
-        <input type="text" id="name" name="name" required placeholder="예: 홍길동" />
-      </div>
-      <div class="form-group">
-        <label for="phone">연락처<span style="color:red;">*</span></label>
-        <input type="tel" id="phone" name="phone" required placeholder="010-1234-5678" pattern="[0-9\-]+" />
-      </div>
-
-      <button type="submit" class="btn-cta">무료 견적 요청하기</button>
-    </form>
-  </section>
-
-  <section id="external-links">
-    <h2>관련 공신력 있는 외부 정보 출처</h2>
-    <p>본 페이지의 내용은 공신력 있는 기관의 통계 및 관련 법규를 바탕으로 작성되었습니다. 더 자세한 정보는 아래 외부 사이트를 통해 확인하실 수 있습니다.</p>
-    <ul>
-      <li><a href="https://namu.wiki/w/%EA%B2%BD%EC%B0%A8" target="_blank">나무위키: 경차 규격 및 정의</a></li>
-      <li><a href="https://www.koreatax.org/tax/car/car01.php" target="_blank">한국납세자연맹: 자동차보험과 보험료</a></li>
-      <li><a href="https://www.kidi.or.kr/" target="_blank">보험개발원: 자동차 보험료 산출 기준 및 통계</a></li>
-      <li><a href="https://www.gov.kr/portal/schulnfcMypageSclInfoView.do?Mcode=10003" target="_blank">정부24: 경차 유류세 환급 제도 안내</a></li>
-      <li><a href="https://www.fss.or.kr/fss/main/index.do" target="_blank">금융감독원: 자동차보험 가입 시 유의사항</a></li>
-    </ul>
-  </section>
+    <script>
+        // FAQ 토글 기능
+        document.querySelectorAll('.faq-item h3').forEach(item => {
+            item.addEventListener('click', event => {
+                const parent = item.parentElement;
+                parent.classList.toggle('active');
+            });
+        });
+    </script>
 
 
-	
+
 
 
 <footer style="font-size: 11px; color: #888; padding: 30px 20px; text-align: center; line-height: 1.8; font-family: sans-serif;">
@@ -624,8 +985,6 @@
 
 
 
-
-
 <meta name="color-scheme" content="light" /><style data-btmanifest="1027280358_main" nonce="2Mv94Jjk">:root, .__ig-light-mode:root, .__ig-light-mode {--fds-black:#000000;--fds-black-alpha-05:rgba(0, 0, 0, 0.05);--fds-black-alpha-10:rgba(0, 0, 0, 0.1);--fds-black-alpha-15:rgba(0, 0, 0, 0.15);--fds-black-alpha-20:rgba(0, 0, 0, 0.2);--fds-black-alpha-30:rgba(0, 0, 0, 0.3);--fds-black-alpha-40:rgba(0, 0, 0, 0.4);--fds-black-alpha-50:rgba(0, 0, 0, 0.5);--fds-black-alpha-60:rgba(0, 0, 0, 0.6);--fds-black-alpha-80:rgba(0, 0, 0, 0.8);--fds-blue-05:#ECF3FF;--fds-blue-30:#AAC9FF;--fds-blue-40:#77A7FF;--fds-blue-60:#1877F2;--fds-blue-70:#2851A3;--fds-blue-80:#1D3C78;--fds-button-text:#444950;--fds-comment-background:#F2F3F5;--fds-dark-mode-gray-35:#CCCCCC;--fds-dark-mode-gray-50:#828282;--fds-dark-mode-gray-70:#4A4A4A;--fds-dark-mode-gray-80:#373737;--fds-dark-mode-gray-90:#282828;--fds-dark-mode-gray-100:#1C1C1C;--fds-gray-00:#F5F6F7;--fds-gray-05:#F2F3F5;--fds-gray-10:#EBEDF0;--fds-gray-20:#DADDE1;--fds-gray-25:#CCD0D5;--fds-gray-30:#BEC3C9;--fds-gray-45:#8D949E;--fds-gray-70:#606770;--fds-gray-80:#444950;--fds-gray-90:#303338;--fds-gray-100:#1C1E21;--fds-green-55:#00A400;--fds-green-65:#51CE70;--fds-highlight:#3578E5;--fds-highlight-cell-background:#ECF3FF;--fds-primary-icon:#1C1E21;--fds-primary-text:#1C1E21;--fds-red-55:#FA383E;--fds-soft:cubic-bezier(.08,.52,.52,1);--fds-spectrum-aluminum-tint-70:#E4F0F6;--fds-spectrum-blue-gray-tint-70:#CFD1D5;--fds-spectrum-cherry:#F35369;--fds-spectrum-cherry-tint-70:#FBCCD2;--fds-spectrum-grape-tint-70:#DDD5F0;--fds-spectrum-grape-tint-90:#F4F1FA;--fds-spectrum-lemon-dark-1:#F5C33B;--fds-spectrum-lemon-tint-70:#FEF2D1;--fds-spectrum-lime:#A3CE71;--fds-spectrum-lime-tint-70:#E4F0D5;--fds-spectrum-orange-tint-70:#FCDEC5;--fds-spectrum-orange-tint-90:#FEF4EC;--fds-spectrum-seafoam-tint-70:#CAEEF9;--fds-spectrum-slate-dark-2:#89A1AC;--fds-spectrum-slate-tint-70:#EAEFF2;--fds-spectrum-teal:#6BCEBB;--fds-spectrum-teal-dark-1:#4DBBA6;--fds-spectrum-teal-dark-2:#31A38D;--fds-spectrum-teal-tint-70:#D2F0EA;--fds-spectrum-teal-tint-90:#F0FAF8;--fds-spectrum-tomato:#FB724B;--fds-spectrum-tomato-tint-30:#F38E7B;--fds-spectrum-tomato-tint-90:#FDEFED;--fds-strong:cubic-bezier(.12,.8,.32,1);--fds-unified-blue-35:#1455B0;--fds-unified-gray-20:#323436;--fds-white:#FFFFFF;--fds-white-alpha-05:rgba(255, 255, 255, 0.05);--fds-white-alpha-10:rgba(255, 255, 255, 0.1);--fds-white-alpha-20:rgba(255, 255, 255, 0.2);--fds-white-alpha-30:rgba(255, 255, 255, 0.3);--fds-white-alpha-40:rgba(255, 255, 255, 0.4);--fds-white-alpha-50:rgba(255, 255, 255, 0.5);--fds-white-alpha-60:rgba(255, 255, 255, 0.6);--fds-white-alpha-80:rgba(255, 255, 255, 0.8);--fds-yellow-20:#FFBA00;--accent:#0095F6;--always-white:#FFFFFF;--always-black:black;--always-dark-gradient:linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.6));--always-dark-overlay:rgba(43, 48, 54, 0.8);--always-light-overlay:rgba(255, 255, 255, 0.4);--always-gray-40:#65676B;--always-gray-75:#BCC0C4;--always-gray-95:#F0F2F5;--attachment-footer-background:#F0F2F5;--background-deemphasized:#F0F2F5;--badge-background-color-blue:var(--accent);--badge-background-color-dark-gray:var(--secondary-icon);--badge-background-color-gray:var(--disabled-icon);--badge-background-color-green:var(--positive);--badge-background-color-light-blue:var(--highlight-bg);--badge-background-color-red:var(--notification-badge);--badge-background-color-yellow:var(--base-lemon);--base-blue:#1877F2;--base-cherry:#F3425F;--base-grape:#9360F7;--base-lemon:#F7B928;--base-lime:#45BD62;--base-pink:#FF66BF;--base-seafoam:#54C7EC;--base-teal:#2ABBA7;--base-tomato:#FB724B;--text-badge-info-background:hsl(214, 89%, 52%);--text-badge-success-background:#31A24C;--text-badge-attention-background:hsl(40, 89%, 52%);--text-badge-critical-background:#e41e3f;--blue-link:#00376B;--border-focused:#65676B;--card-background:#FFFFFF;--card-background-flat:#F7F8FA;--comment-background:#F0F2F5;--comment-footer-background:#F6F9FA;--dataviz-primary-1:rgb(0,174,143);--dataviz-blue-primary:#1D85FC;--dataviz-blue-secondary:#043B72;--dataviz-orange:#D06C14;--disabled-button-background:rgba(0, 149, 246, 0.3);--disabled-button-text:#FFFFFF;--disabled-icon:#BCC0C4;--disabled-text:#BCC0C4;--divider:#DBDBDB;--event-date:#F3425F;--fb-wordmark:#0866FF;--fb-logo:#0866FF;--filter-accent:invert(39%) sepia(57%) saturate(200%) saturate(200%) saturate(200%) saturate(200%) saturate(200%) saturate(147.75%) hue-rotate(202deg) brightness(97%) contrast(96%);--filter-always-white:invert(100%);--filter-disabled-icon:invert(80%) sepia(6%) saturate(200%) saturate(120%) hue-rotate(173deg) brightness(98%) contrast(89%);--filter-placeholder-icon:invert(59%) sepia(11%) saturate(200%) saturate(135%) hue-rotate(176deg) brightness(96%) contrast(94%);--filter-primary-accent:invert(39%) sepia(57%) saturate(200%) saturate(200%) saturate(200%) saturate(200%) saturate(200%) saturate(147.75%) hue-rotate(202deg) brightness(97%) contrast(96%);--filter-primary-icon:invert(8%) sepia(10%) saturate(200%) saturate(200%) saturate(166%) hue-rotate(177deg) brightness(104%) contrast(91%);--filter-secondary-button-icon-on-media:invert(100%);--filter-secondary-icon:invert(39%) sepia(21%) saturate(200%) saturate(109.5%) hue-rotate(174deg) brightness(94%) contrast(86%);--filter-warning-icon:invert(77%) sepia(29%) saturate(200%) saturate(200%) saturate(200%) saturate(200%) saturate(200%) saturate(128%) hue-rotate(359deg) brightness(102%) contrast(107%);--filter-blue-link-icon:invert(30%) sepia(98%) saturate(200%) saturate(200%) saturate(200%) saturate(166.5%) hue-rotate(192deg) brightness(91%) contrast(101%);--filter-positive:invert(37%) sepia(61%) saturate(200%) saturate(200%) saturate(200%) saturate(200%) saturate(115%) hue-rotate(91deg) brightness(97%) contrast(105%);--filter-primary-deemphasized-button-icon:invert(28%) sepia(100%) saturate(6042%) hue-rotate(202deg) brightness(96%) contrast(101%);--filter-negative:invert(25%) sepia(33%) saturate(200%) saturate(200%) saturate(200%) saturate(200%) saturate(200%) saturate(200%) saturate(110%) hue-rotate(345deg) brightness(132%) contrast(96%);--focus-ring-blue:#1877F2;--glimmer-base-opaque:#979A9F;--glimmer-high-contrast-base-opaque:#65686C;--glimmer-opacity-high-contrast-max:1;--glimmer-opacity-high-contrast-min:0.08;--glimmer-opacity-max:1;--glimmer-opacity-min:0.25;--glimmer-spinner-icon:#65676B;--hero-banner-background:#FFFFFF;--hosted-view-selected-state:rgba(45, 136, 255, 0.1);--highlight-bg:#E7F3FF;--hover-overlay:rgba(0, 0, 0, 0.05);--inverse-text:var(--always-white);--list-cell-chevron:#65676B;--media-hover:rgba(68, 73, 80, 0.15);--media-inner-border:rgba(0, 0, 0, 0.1);--media-outer-border:#FFFFFF;--media-pressed:rgba(68, 73, 80, 0.35);--messenger-card-background:#FFFFFF;--messenger-card-box-shadow:0px 1px 2px 0px #0000001A;--mwp-header-background-color:var(--messenger-card-background);--mwp-header-button-color:var(--accent);--mwp-message-row-background:var(--messenger-card-background);--messenger-reply-background:#F0F2F5;--overlay-alpha-80:rgba(0, 0, 0, 0.65);--overlay-on-media:rgba(0, 0, 0, 0.6);--nav-bar-background:#FFFFFF;--popover-card-background:var(--card-background);--nav-bar-background-gradient:linear-gradient(to top, #FFFFFF, rgba(255,255,255.9), rgba(255,255,255,.7), rgba(255,255,255,.4), rgba(255,255,255,0));--nav-bar-background-gradient-wash:linear-gradient(to top, #F0F2F5, rgba(240,242,245.9), rgba(240,242,245,.7), rgba(240,242,245,.4), rgba(240,242,245,0));--negative:hsl(350, 87%, 55%);--negative-background:hsl(350, 87%, 55%, 20%);--new-notification-background:#E7F3FF;--non-media-pressed:rgba(68, 73, 80, 0.15);--non-media-pressed-on-dark:rgba(255, 255, 255, 0.3);--notification-badge:#e41e3f;--placeholder-icon:#65676B;--placeholder-image:rgb(164, 167, 171);--placeholder-text:#65676B;--placeholder-text-on-media:rgba(255, 255, 255, 0.5);--popover-background:#FFFFFF;--positive:#31A24C;--positive-background:#DEEFE1;--press-overlay:rgba(0, 0, 0, 0.10);--primary-button-background:#0095F6;--primary-button-icon:#FFFFFF;--primary-button-pressed:#77A7FF;--primary-button-text:#FFFFFF;--primary-deemphasized-button-background:rgba(0, 149, 246, 0.1);--primary-deemphasized-button-pressed:rgba(0, 149, 246, 0.05);--primary-deemphasized-button-pressed-overlay:rgba(0, 149, 246, 0.15);--primary-deemphasized-button-text:#0095F6;--primary-icon:#262626;--primary-text:#262626;--primary-text-on-media:#FFFFFF;--primary-web-focus-indicator:#D24294;--progress-ring-neutral-background:rgba(0, 0, 0, 0.2);--progress-ring-neutral-foreground:#000000;--progress-ring-on-media-background:rgba(255, 255, 255, 0.2);--progress-ring-on-media-foreground:#FFFFFF;--progress-ring-blue-background:rgba(24, 119, 242, 0.2);--progress-ring-blue-foreground:hsl(214, 89%, 52%);--progress-ring-disabled-background:rgba(190,195,201, 0.2);--progress-ring-disabled-foreground:#BEC3C9;--rating-star-active:#EB660D;--scroll-thumb:#BCC0C4;--scroll-shadow:0 1px 2px rgba(0, 0, 0, 0.1), 0 -1px rgba(0, 0, 0, 0.1) inset;--secondary-button-background:transparent;--secondary-button-background-floating:#ffffff;--secondary-button-background-on-dark:rgba(0, 0, 0, 0.4);--secondary-button-pressed:rgba(0, 0, 0, 0.05);--secondary-button-stroke:transparent;--secondary-button-text:#0095F6;--secondary-icon:#8E8E8E;--secondary-text:#8E8E8E;--secondary-text-on-media:rgba(255, 255, 255, 0.9);--section-header-text:#4B4C4F;--shadow-1:rgba(0, 0, 0, 0.1);--shadow-2:rgba(0, 0, 0, 0.2);--shadow-5:rgba(0, 0, 0, 0.5);--shadow-8:rgba(0, 0, 0, 0.8);--shadow-base:0 1px 2px var(--shadow-2);--shadow-elevated:0 8px 20px 0 rgba(0, 0, 0, 0.2), 0 2px 4px 0 rgba(0, 0, 0, 0.1);--shadow-emphasis:0 2px 12px var(--shadow-2);--shadow-inset:rgba(255, 255, 255, 0.5);--shadow-on-media:0px 0px 1px rgba(0, 0, 0, 0.62);--shadow-persistent:0px 0px 12px rgba(52, 72, 84, 0.05);--shadow-primary:0px 5px 12px rgba(52, 72, 84, 0.2);--shadow-responsive:0px 8px 16px 0px rgba(0, 0, 0, 0.1);--surface-background:#FFFFFF;--switch-active:hsl(214, 89%, 52%);--switch-inactive:#DBDBDB;--switch-unchecked-background-color:#8F9297;--text-highlight:rgba(24, 119, 242, 0.2);--input-background:#FFFFFF;--input-background-hover:var(--input-background);--input-background-warn-hover:hsla(var(--warning-h), var(--warning-s), var(--warning-l), 0.05);--input-background-error-hover:hsla(var(--negative-h), var(--negative-s), var(--negative-l), 0.05);--input-background-active:hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.05);--input-background-warn-active:hsla(var(--warning-h), var(--warning-s), var(--warning-l), 0.05);--input-background-error-active:hsla(var(--negative-h), var(--negative-s), var(--negative-l), 0.05);--input-background-disabled:#F0F2F5;--input-border-color:#CED0D4;--input-border-color-hover:var(--placeholder-text);--input-label-color-highlighted:hsl(214, 89%, 52%);--input-label-color-inside:var(--secondary-text);--input-label-color-error:var(--negative);--input-label-color-disabled:var(--disabled-text);--text-input-outside-label:#000000;--toast-background:#FFFFFF;--toast-text:#1C2B33;--toast-text-link:#216FDB;--toast-border-color:transparent;--toast-border-style:none;--toast-border-width:0px;--toggle-active-background:#E7F3FF;--toggle-active-icon:rgb(24, 119, 242);--toggle-active-text:rgb(24, 119, 242);--toggle-button-active-background:#E7F3FF;--tooltip-background:rgba(244, 244, 244, 0.8);--tooltip-box-shadow:0 2px 4px 0 var(--shadow-5);--popover-border-color:transparent;--wash:#FAFAFA;--web-wash:#FAFAFA;--warning:hsl(40, 89%, 52%);--chat-bubble-emphasis-ring-after:black;--chat-bubble-emphasis-ring-before:white;--chat-text-blockquote-color-background-line:rgba(0, 0, 0, 0.12);--chat-text-blockquote-color-text-primary-media:rgba(255, 255, 255, 0.7);--chat-incoming-message-bubble-background-color:#F0F0F0;--chat-outgoing-message-bubble-background-color:var(--accent);--chat-replied-message-background-color:rgba(0, 0, 0, 0.03);--radio-border-color:var(--primary-icon);--radio-border-color-disabled:var(--disabled-button-background);--radio-border-color-selected:var(--accent);--radio-checked-icon-color:var(--accent);--radio-checked-icon-color-disabled:var(--disabled-button-background);--dialog-anchor-vertical-padding:56px;--header-height:0px;--global-panel-width:0px;--global-panel-width-expanded:0px;--alert-banner-corner-radius:8px;--button-corner-radius:4px;--button-corner-radius-medium:10px;--button-corner-radius-large:12px;--button-height-large:40px;--button-height-medium:36px;--button-padding-horizontal-large:16px;--button-padding-horizontal-medium:16px;--button-padding-icon-only:16px;--button-icon-padding-large:16px;--button-icon-padding-medium:16px;--button-inner-icon-spacing-large:3px;--button-inner-icon-spacing-medium:3px;--blueprint-button-height-medium:40px;--blueprint-button-height-large:48px;--card-corner-radius:4px;--card-box-shadow:0 12px 28px 0 var(--shadow-2), 0 2px 4px 0 var(--shadow-1);--card-padding-horizontal:10px;--card-padding-vertical:20px;--chip-corner-radius:6px;--comment-bubble:18px;--dialog-corner-radius:8px;--glimmer-corner-radius:8px;--image-corner-radius:4px;--infochip-medium-radius:12px;--input-corner-radius:6px;--input-border-width:1px;--nav-list-cell-corner-radius:8px;--list-cell-corner-radius:8px;--list-cell-min-height:52px;--list-cell-padding-vertical:20px;--list-cell-padding-vertical-with-addon:14px;--menu-base-list-item-padding-horizontal:8px;--menu-base-list-item-padding-vertical:12px;--menu-base-size-full-margin-end:48px;--menu-item-base-margin-horizontal:8px;--menu-item-base-margin-vertical:0px;--menu-item-base-padding-horizontal:8px;--menu-item-base-overlay-radius:4px;--menu-item-base-padding-vertical:12px;--menu-item-base-with-icon-padding-horizontal:var(--menu-item-base-padding-horizontal);--separator-menu-item-margin-horizontal:16px;--separator-menu-item-margin-vertical:4px;--nav-list-cell-min-height:0px;--nav-list-cell-padding-vertical:16px;--nav-list-cell-padding-vertical-with-addon:16px;--nux-card-body-padding-end:24px;--page-footer-padding-vertical:16px;--popover-border-style:none;--popover-border-width:0px;--section-header-addOnEnd-margin-horizontal:8px;--section-header-addOnStart-margin-horizontal:12px;--section-header-addOnEnd-button-padding-horizontal:0px;--section-header-addOnEnd-button-padding-vertical:0px;--section-header-padding-vertical:16px;--section-header-subtitle-margin-vertical:14px;--section-header-subtitle-with-addOnEnd-margin-vertical:6px;--tab-height:60px;--tab-icon-padding-end:0px;--tab-text-icon-gap:4px;--tab-underline-color:transparent;--tab-underline-height:3px;--text-badge-corner-radius:4px;--text-badge-padding-horizontal:6px;--text-badge-padding-vertical:6px;--text-input-multi-padding-between-text-scrollbar:20px;--text-input-multi-padding-scrollbar:16px;--text-input-caption-margin-top:10px;--text-input-padding-vertical:12px;--toast-addon-padding-horizontal:6px;--toast-addon-padding-vertical:6px;--toast-container-max-width:100%;--toast-container-min-width:288px;--toast-container-padding-horizontal:10px;--toast-container-padding-vertical:16px;--toast-corner-radius:8px;--toaster-view-max-width:328px;--tooltip-corner-radius:8px;--typeahead-list-outer-padding-vertical:2px;--fds-animation-enter-exit-in:cubic-bezier(0.14, 1, 0.34, 1);--fds-animation-enter-exit-out:cubic-bezier(0.45, 0.1, 0.2, 1);--fds-animation-swap-shuffle-in:cubic-bezier(0.14, 1, 0.34, 1);--fds-animation-swap-shuffle-out:cubic-bezier(0.45, 0.1, 0.2, 1);--fds-animation-move-in:cubic-bezier(0.17, 0.17, 0, 1);--fds-animation-move-out:cubic-bezier(0.17, 0.17, 0, 1);--fds-animation-expand-collapse-in:cubic-bezier(0.17, 0.17, 0, 1);--fds-animation-expand-collapse-out:cubic-bezier(0.17, 0.17, 0, 1);--fds-animation-passive-move-in:cubic-bezier(0.5, 0, 0.1, 1);--fds-animation-passive-move-out:cubic-bezier(0.5, 0, 0.1, 1);--fds-animation-quick-move-in:cubic-bezier(0.1, 0.9, 0.2, 1);--fds-animation-quick-move-out:cubic-bezier(0.1, 0.9, 0.2, 1);--fds-animation-fade-in:cubic-bezier(0, 0, 1, 1);--fds-animation-fade-out:cubic-bezier(0, 0, 1, 1);--fds-duration-extra-extra-short-in:100ms;--fds-duration-extra-extra-short-out:100ms;--fds-duration-extra-short-in:200ms;--fds-duration-extra-short-out:150ms;--fds-duration-short-in:280ms;--fds-duration-short-out:200ms;--fds-duration-medium-in:400ms;--fds-duration-medium-out:350ms;--fds-duration-long-in:500ms;--fds-duration-long-out:350ms;--fds-duration-extra-long-in:1000ms;--fds-duration-extra-long-out:1000ms;--fds-duration-none:0ms;--fds-fast:200ms;--fds-slow:400ms;--font-family-apple:system-ui, -apple-system, BlinkMacSystemFont, '.SFNSText-Regular', sans-serif;--font-family-code:ui-monospace, Menlo, Consolas, Monaco, monospace;--font-family-default:Helvetica, Arial, sans-serif;--font-family-segoe:Segoe UI Historic, Segoe UI, Helvetica, Arial, sans-serif;--font-family-system-fds:system-ui, -apple-system, BlinkMacSystemFont, Segoe UI Historic, Segoe UI, Helvetica, Arial, sans-serif;--text-input-field-font-family:Placeholder Font;--text-input-field-font-size:1rem;--text-input-field-font-stretch:initial;--text-input-field-font-weight:500;--text-input-field-line-height:1.2941;--text-input-label-font-family:Placeholder Font;--text-input-label-font-size:17px;--text-input-label-font-size-scale-multiplier:0.75;--text-input-label-font-stretch:initial;--text-input-label-font-weight:400;--text-input-label-line-height:1.2941;--messenger-card-min-width:300px;--messenger-card-max-width:480px;--messenger-application-max-width:2560px;--messenger-sidebar-collapsed-width:44px;--messenger-sidebar-expanded-width:240px;--messenger-card-corner-radius:8px;--messenger-card-spacing:16px;--chat-bubble-padding-vertical:8px;--chat-bubble-padding-horizontal:12px;--chat-bubble-border-radius:18px;--dialog-size-medium-width:100%;--dialog-size-small-width:100%;--focus-ring-outline-forced-colors:2px auto transparent !important;--focus-ring-outline-link:2px auto var(--focus-ring-blue);--focus-ring-shadow-default:0 0 0 2px var(--always-white), 0 0 0 4px var(--focus-ring-blue);--focus-ring-shadow-inset:0 0 0 2px var(--focus-ring-blue) inset, 0 0 0 4px var(--always-white) inset;--glimmer-animation-direction:alternate;--glimmer-animation-duration:1000ms;--glimmer-animation-timing-function:steps(10, end);--radio-checked-icon-size-large:12px;--radio-checked-icon-size-medium:12px;--radio-border-width:2px;--radio-size-large:24px;--radio-size-medium:20px;--blue-primary:rgb(0,136,244);--blue-secondary:rgb(4,59,114);--blue-tertiary:rgb(235,245,255);--chartreuse-primary:rgb(106,147,22);--chartreuse-secondary:rgb(50,65,19);--chartreuse-tertiary:rgb(226,255,152);--cyan-primary:rgb(0,142,213);--cyan-secondary:rgb(15,63,93);--cyan-tertiary:rgb(231,245,255);--dataviz-primary-2:rgb(156,219,255);--dataviz-primary-3:rgb(73,156,255);--dataviz-secondary-1:rgb(83,78,191);--dataviz-secondary-2:rgb(103,96,228);--dataviz-secondary-3:rgb(119,45,88);--dataviz-supplementary-1:rgb(253,91,67);--dataviz-supplementary-2:rgb(161,132,0);--dataviz-supplementary-3:rgb(36,131,44);--dataviz-supplementary-4:rgb(51,51,52);--fuschia-primary:rgb(250,45,138);--fuschia-secondary:rgb(118,14,62);--fuschia-tertiary:rgb(255,241,246);--green-primary:rgb(43,154,53);--green-secondary:rgb(26,68,27);--green-tertiary:rgb(227,250,224);--magenta-primary:rgb(215,77,204);--magenta-secondary:rgb(96,36,91);--magenta-tertiary:rgb(255,239,254);--orange-primary:rgb(208,108,20);--orange-secondary:rgb(94,49,14);--orange-tertiary:rgb(255,241,239);--purple-primary:rgb(125,116,255);--purple-secondary:rgb(55,50,121);--purple-tertiary:rgb(245,241,255);--red-primary:rgb(251,60,68);--red-secondary:rgb(118,22,27);--red-tertiary:rgb(255,241,239);--teal-primary:rgb(0,152,124);--teal-secondary:rgb(10,68,56);--teal-tertiary:rgb(227,247,241);--yellow-primary:rgb(161,132,0);--yellow-secondary:rgb(72,59,12);--yellow-tertiary:rgb(255,246,161);--base-unit:4px;--blue-0:245, 251, 255;--blue-1:224, 241, 255;--blue-2:179, 219, 255;--blue-3:112, 188, 255;--blue-4:71, 175, 255;--blue-5:0, 149, 246;--blue-6:0, 116, 204;--blue-7:0, 87, 163;--blue-8:0, 55, 107;--blue-9:0, 41, 82;--breakpoint-medium-width:1536px;--breakpoint-small-width:1024px;--challenge-width:460px;--creation-header-height:43px;--creation-min-padding-x:32px;--creation-modal-max-height:898px;--creation-modal-min-height:391px;--creation-padding-x:64px;--creation-padding-y:112px;--creation-settings-width:340px;--cyan-5:39, 196, 245;--desktop-grid-item-margin:28px;--desktop-grid-item-margin-slim:4px;--desktop-nav-height:60px;--desktop-story-tray-bottom-margin:48px;--desktop-story-tray-bottom-margin-denser:24px;--direct-message-max-width:236px;--fb-signup-page-profile-pic-size:88px;--feed-sidebar-width:319px;--feed-width:470px;--feed-width-wide-story:630px;--font-family-system:-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;--font-family-system-prism:"Instagram Sans UI", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;--font-weight-system-bold:700;--font-weight-system-extra-bold:800;--font-weight-system-extra-light:200;--font-weight-system-light:300;--font-weight-system-medium:500;--font-weight-system-regular:400;--font-weight-system-semibold:600;--footer-width-wide:1150px;--gradient-lavender:211, 0, 197;--gradient-orange:255, 122, 0;--gradient-pink:255, 1, 105;--gradient-purple:118, 56, 250;--gradient-red:255, 48, 64;--gradient-yellow:255, 214, 0;--green-4:120, 222, 69;--green-5:88, 195, 34;--green-6:55, 166, 0;--grey-0:245, 245, 245;--grey-1:239, 239, 239;--grey-2:219, 219, 219;--grey-3:199, 199, 199;--grey-4:168, 168, 168;--grey-5:142, 142, 142;--grey-6:115, 115, 115;--grey-7:85, 85, 85;--grey-8:54, 54, 54;--grey-9:38, 38, 38;--grey-10:26, 26, 26;--igds-dialog-border-radius:24px;--igds-menu-border-radius:20px;--ig-animation-move-in:cubic-bezier(0.17, 0.17, 0, 1);--ig-animation-move-out:cubic-bezier(0.17, 0.17, 0, 1);--ig-badge:255, 48, 64;--ig-close-friends-refreshed:28, 209, 79;--ig-duration-extra-extra-short-in:100ms;--ig-duration-extra-extra-short-out:100ms;--ig-error-or-destructive:237, 73, 86;--ig-facebook-blue:53, 121, 234;--ig-input-border-radius:12px;--ig-input-border-width:1px;--ig-live-badge:255, 1, 105;--ig-primary-button:0, 149, 246;--ig-primary-button-hover:24, 119, 242;--ig-secondary-icon:142, 142, 142;--ig-stroke-on-media:255, 255, 255;--ig-tertiary-button-background:255, 255, 255;--ig-tertiary-button-border:219, 219, 219;--ig-tertiary-button-hover:245, 245, 245;--ig-tertiary-button-text:38, 38, 38;--ig-subscribers-only:118, 56, 250;--ig-success:88, 195, 34;--ig-text-input-padding-vertical:20px;--ig-text-on-color:255, 255, 255;--ig-text-on-media:255, 255, 255;--in-feed-story-item-padding:12px;--input-border-radius:6px;--live-video-border-radius:4px;--media-info:335px;--medium-screen-max:875px;--medium-screen-min:736px;--mobile-grid-item-margin:2px;--mobile-nav-height:45px;--modal-backdrop-dark:rgba(0, 0, 0, 0.85);--modal-backdrop-default:rgba(0, 0, 0, 0.65);--modal-border-radius:12px;--modal-padding:16px;--modal-z-index:100;--nav-narrow-width:72px;--nav-medium-width:244px;--nav-wide-width:335px;--nav-bottom-screen-max:767px;--nav-narrow-screen-min:768px;--nav-medium-screen-min:1264px;--nav-wide-screen-min:1920px;--orange-5:253, 141, 50;--photo:600px;--pink-5:209, 8, 105;--polaris-feed-with-padding-threshold-min:640px;--polaris-extra-small-screen-max:413px;--polaris-small-screen-min:414px;--polaris-small-screen-max:735px;--polaris-medium-screen-min:736px;--polaris-medium-screen-max:875px;--polaris-large-screen-min:876px;--polaris-nav-bottom-screen-max:767px;--polaris-post-modal-small-screen-max:1366px;--polaris-post-modal-large-screen-min:1536px;--polaris-post-modal-large-height-max:1032px;--polaris-challenge-width:460px;--polaris-breakpoint-medium-width:1536px;--polaris-breakpoint-small-width:1024px;--polaris-site-width-narrow:600px;--polaris-site-width-wide:935px;--polaris-site-padding-top:30px;--polaris-tablet-screen-max:1136px;--purple-5:163, 7, 186;--red-4:255, 104, 116;--red-5:237, 73, 86;--red-6:198, 35, 48;--red-7:167, 3, 17;--revamp-nav-bottom-toolbar-height:50px;--revamp-feed-card-media-min-width:390px;--revamp-feed-card-dense-padding:16px;--revamp-feed-item-spacing:20px;--right-rail-width:300px;--scrollable-content-header-height-large:56px;--scrollable-content-header-height-med:49px;--scrollable-content-header-height:44px;--search-box-height:40px;--search-modal-height-expanded:450px;--search-modal-height:362px;--search-modal-top-offset:12px;--search-result-height:50px;--search-result-list-width:375px;--site-width-narrow:600px;--site-width-wide:935px;--small-layout-max:1079px;--small-screen-max:735px;--small-screen-min:414px;--story-progressbar-update-tick:0.1s;--story-swap-animation-duration:350ms;--system-10-font-size:10px;--system-10-line-height:12px;--system-11-font-size:11px;--system-11-line-height:13px;--system-12-font-size:12px;--system-12-line-height:16px;--system-14-font-size:14px;--system-14-line-height:18px;--system-16-font-size:16px;--system-16-line-height:20px;--system-18-font-size:18px;--system-18-line-height:24px;--system-20-font-size:20px;--system-20-line-height:25px;--system-22-font-size:22px;--system-22-line-height:26px;--system-24-font-size:24px;--system-24-line-height:27px;--system-26-font-size:26px;--system-26-line-height:28px;--system-28-font-size:28px;--system-28-line-height:32px;--system-30-font-size:30px;--system-30-line-height:36px;--system-32-font-size:32px;--system-32-line-height:40px;--web-always-black:0, 0, 0;--web-always-white:255, 255, 255;--web-overlay-on-media:38, 38, 38;--web-secondary-action:224, 241, 255;--yellow-5:253, 203, 92;--barcelona-logo:0, 0, 0;--challenge-link:54, 54, 54;--ig-banner-background:255, 255, 255;--ig-elevated-background:255, 255, 255;--ig-elevated-highlight-background:239, 239, 239;--ig-elevated-separator:219, 219, 219;--ig-focus-stroke:168, 168, 168;--ig-highlight-background:239, 239, 239;--ig-hover-overlay:0, 0, 0, 0.05;--ig-link:0, 55, 107;--ig-primary-background:255, 255, 255;--ig-primary-icon:38, 38, 38;--ig-primary-text:0, 0, 0;--ig-secondary-background:245, 245, 245;--ig-secondary-button:38, 38, 38;--ig-secondary-button-background:239, 239, 239;--ig-secondary-button-hover:219, 219, 219;--ig-secondary-text:115, 115, 115;--ig-separator:219, 219, 219;--ig-stroke:219, 219, 219;--ig-temporary-highlight:245, 251, 255;--ig-tertiary-icon:199, 199, 199;--ig-tertiary-text:199, 199, 199;--post-separator:239, 239, 239;--tos-box-shadow:0, 0, 0;--ig-toggle-background-on-prism:12, 16, 20;--ig-toggle-background-off-prism:219, 223, 228;--ig-toggle-background-disabled-on-prism:162, 170, 180;--ig-toggle-background-disabled-off-prism:233, 237, 240;--ig-toggle-outline-prism:219, 223, 228;--ig-toggle-outline-disabled-prism:243, 245, 247;--ig-stroke-prism:255, 255, 255;--ig-stroke-disabled-on-prism:233, 237, 240;--ig-stroke-disabled-off-prism:248, 249, 249;--ig-dropdown-background:243, 245, 247;--ig-colors-button-borderless-background--disabled:220, 224, 229;--ig-colors-button-borderless-text:65, 80, 247;--ig-colors-button-borderless-text--disabled:184, 205, 255;--ig-colors-button-borderless-text--hover:37, 54, 208;--ig-colors-button-borderless-text--pressed:31, 40, 173;--ig-colors-button-primary-background:74, 93, 249;--ig-colors-button-primary-background--disabled:184, 205, 255;--ig-colors-button-primary-background--hover:65, 80, 247;--ig-colors-button-primary-background--pressed:65, 80, 247;--ig-colors-button-primary-link-text:49, 67, 227;--ig-colors-button-primary-link-text--disabled:163, 188, 255;--ig-colors-button-primary-link-text--hover:37, 54, 208;--ig-colors-button-primary-link-text--pressed:31, 40, 173;--ig-colors-button-primary-text:255, 255, 255;--ig-colors-button-primary-text--disabled:white-00;--ig-colors-button-secondary-background:240, 242, 245;--ig-colors-button-secondary-background--disabled:220, 224, 229;--ig-colors-button-secondary-background--hover:231, 234, 238;--ig-colors-button-secondary-background--pressed:231, 234, 238;--ig-colors-button-secondary-link-text:12, 16, 20;--ig-colors-button-secondary-link-text--disabled:94, 100, 109;--ig-colors-button-secondary-link-text--hover:12, 16, 20;--ig-colors-button-secondary-link-text--pressed:12, 16, 20;--ig-colors-button-secondary-text:12, 16, 20;--ig-colors-button-secondary-text--disabled:94, 100, 109;--ig-colors-link-text:65, 80, 247;--ig-input-border-primary:33, 35, 40;--ig-input-border-secondary:219, 223, 228;--ig-input-disabled-background-color:243, 245, 247;--ig-input-text-and-icon-primary:12, 16, 20;--ig-input-text-and-icon-secondary:106, 113, 122;--ig-menu-background-color:248, 249, 249;--ig-menu-text-color:12, 16, 20;--ig-tab-underline-active:12, 16, 20;--ig-tablist-border:219, 223, 228;--status-alert:224, 1, 13;--status-positive:0, 142, 40;}@media (prefers-color-scheme: dark){:root {--fds-black:black;--fds-black-alpha-05:rgba(0, 0, 0, 0.05);--fds-black-alpha-10:rgba(0, 0, 0, 0.1);--fds-black-alpha-15:rgba(0, 0, 0, 0.15);--fds-black-alpha-20:rgba(0, 0, 0, 0.2);--fds-black-alpha-30:rgba(0, 0, 0, 0.3);--fds-black-alpha-40:rgba(0, 0, 0, 0.4);--fds-black-alpha-50:rgba(0, 0, 0, 0.5);--fds-black-alpha-60:rgba(0, 0, 0, 0.6);--fds-black-alpha-80:rgba(0, 0, 0, 0.8);--fds-blue-05:black;--fds-blue-30:black;--fds-blue-40:black;--fds-blue-60:black;--fds-blue-70:black;--fds-blue-80:black;--fds-button-text:black;--fds-comment-background:black;--fds-dark-mode-gray-35:black;--fds-dark-mode-gray-50:black;--fds-dark-mode-gray-70:black;--fds-dark-mode-gray-80:black;--fds-dark-mode-gray-90:black;--fds-dark-mode-gray-100:black;--fds-gray-00:black;--fds-gray-05:black;--fds-gray-10:black;--fds-gray-20:black;--fds-gray-25:black;--fds-gray-30:black;--fds-gray-45:black;--fds-gray-70:black;--fds-gray-80:black;--fds-gray-90:black;--fds-gray-100:black;--fds-green-55:black;--fds-green-65:black;--fds-highlight:black;--fds-highlight-cell-background:black;--fds-primary-icon:white;--fds-primary-text:white;--fds-red-55:black;--fds-soft:cubic-bezier(.08,.52,.52,1);--fds-spectrum-aluminum-tint-70:black;--fds-spectrum-blue-gray-tint-70:black;--fds-spectrum-cherry:black;--fds-spectrum-cherry-tint-70:black;--fds-spectrum-grape-tint-70:black;--fds-spectrum-grape-tint-90:black;--fds-spectrum-lemon-dark-1:black;--fds-spectrum-lemon-tint-70:black;--fds-spectrum-lime:black;--fds-spectrum-lime-tint-70:black;--fds-spectrum-orange-tint-70:black;--fds-spectrum-orange-tint-90:black;--fds-spectrum-seafoam-tint-70:black;--fds-spectrum-slate-dark-2:black;--fds-spectrum-slate-tint-70:black;--fds-spectrum-teal:black;--fds-spectrum-teal-dark-1:black;--fds-spectrum-teal-dark-2:black;--fds-spectrum-teal-tint-70:black;--fds-spectrum-teal-tint-90:black;--fds-spectrum-tomato:black;--fds-spectrum-tomato-tint-30:black;--fds-spectrum-tomato-tint-90:black;--fds-strong:cubic-bezier(.12,.8,.32,1);--fds-unified-blue-35:black;--fds-unified-gray-20:black;--fds-white:black;--fds-white-alpha-05:rgba(255, 255, 255, 0.05);--fds-white-alpha-10:rgba(255, 255, 255, 0.1);--fds-white-alpha-20:rgba(255, 255, 255, 0.2);--fds-white-alpha-30:rgba(255, 255, 255, 0.3);--fds-white-alpha-40:rgba(255, 255, 255, 0.4);--fds-white-alpha-50:rgba(255, 255, 255, 0.5);--fds-white-alpha-60:rgba(255, 255, 255, 0.6);--fds-white-alpha-80:rgba(255, 255, 255, 0.8);--fds-yellow-20:black;--accent:#0095F6;--always-white:white;--always-black:black;--always-dark-gradient:linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.6));--always-dark-overlay:rgba(43, 48, 54, 0.8);--always-light-overlay:rgba(255, 255, 255, 0.4);--always-gray-40:#65676B;--always-gray-75:#BCC0C4;--always-gray-95:#F0F2F5;--attachment-footer-background:rgba(255,255,255,0.1);--background-deemphasized:rgba(255,255,255,0.1);--badge-background-color-blue:var(--accent);--badge-background-color-dark-gray:var(--secondary-icon);--badge-background-color-gray:var(--disabled-icon);--badge-background-color-green:var(--positive);--badge-background-color-light-blue:var(--highlight-bg);--badge-background-color-red:var(--notification-badge);--badge-background-color-yellow:var(--base-lemon);--base-blue:#1877F2;--base-cherry:#F3425F;--base-grape:#9360F7;--base-lemon:#F7B928;--base-lime:#45BD62;--base-pink:#FF66BF;--base-seafoam:#54C7EC;--base-teal:#2ABBA7;--base-tomato:#FB724B;--text-badge-info-background:hsl(214, 100%, 59%);--text-badge-success-background:#31A24C;--text-badge-attention-background:hsl(40, 89%, 52%);--text-badge-critical-background:#e41e3f;--blue-link:#00376B;--border-focused:#8A8D91;--card-background:#242526;--card-background-flat:#323436;--comment-background:#3A3B3C;--comment-footer-background:#4E4F50;--dataviz-primary-1:rgb(0,174,143);--dataviz-blue-primary:#1D85FC;--dataviz-blue-secondary:#EBF5FF;--dataviz-orange:#D06C14;--disabled-button-background:rgba(255, 255, 255, 0.2);--disabled-button-text:rgba(255, 255, 255, 0.3);--disabled-icon:rgba(255, 255, 255, 0.3);--disabled-text:rgba(255, 255, 255, 0.3);--divider:#3E4042;--event-date:#F3425F;--fb-wordmark:#FFFFFF;--fb-logo:#0866FF;--filter-accent:invert(40%) sepia(52%) saturate(200%) saturate(200%) saturate(200%) saturate(189%) hue-rotate(191deg) brightness(103%) contrast(102%);--filter-always-white:invert(100%);--filter-disabled-icon:invert(100%) opacity(30%);--filter-placeholder-icon:invert(59%) sepia(11%) saturate(200%) saturate(135%) hue-rotate(176deg) brightness(96%) contrast(94%);--filter-primary-accent:invert(40%) sepia(52%) saturate(200%) saturate(200%) saturate(200%) saturate(189%) hue-rotate(191deg) brightness(103%) contrast(102%);--filter-primary-icon:invert(89%) sepia(6%) hue-rotate(185deg);--filter-secondary-button-icon-on-media:invert(100%);--filter-secondary-icon:invert(62%) sepia(98%) saturate(12%) hue-rotate(175deg) brightness(90%) contrast(96%);--filter-warning-icon:invert(77%) sepia(29%) saturate(200%) saturate(200%) saturate(200%) saturate(200%) saturate(200%) saturate(128%) hue-rotate(359deg) brightness(102%) contrast(107%);--filter-blue-link-icon:invert(73%) sepia(29%) saturate(200%) saturate(200%) saturate(200%) saturate(200%) saturate(200%) saturate(200%) saturate(103.25%) hue-rotate(189deg) brightness(101%) contrast(101%);--filter-positive:invert(37%) sepia(61%) saturate(200%) saturate(200%) saturate(200%) saturate(200%) saturate(115%) hue-rotate(91deg) brightness(97%) contrast(105%);--filter-primary-deemphasized-button-icon:brightness(0) saturate(100%) invert(63%) sepia(20%) saturate(1290%) hue-rotate(185deg) brightness(107%) contrast(101%);--filter-negative:invert(25%) sepia(33%) saturate(200%) saturate(200%) saturate(200%) saturate(200%) saturate(200%) saturate(200%) saturate(110%) hue-rotate(345deg) brightness(132%) contrast(96%);--focus-ring-blue:#1877F2;--glimmer-base-opaque:#FFFFFF;--glimmer-high-contrast-base-opaque:#FFFFFF;--glimmer-opacity-high-contrast-max:0.48;--glimmer-opacity-high-contrast-min:0.1;--glimmer-opacity-max:1;--glimmer-opacity-min:0.25;--glimmer-spinner-icon:white;--hero-banner-background:#E85D07;--hosted-view-selected-state:rgba(45, 136, 255, 0.1);--highlight-bg:rgba(24, 119, 242, .31);--hover-overlay:rgba(255, 255, 255, 0.1);--inverse-text:var(--always-white);--list-cell-chevron:#B0B3B8;--media-hover:rgba(68, 73, 80, 0.15);--media-inner-border:rgba(255, 255, 255, 0.05);--media-outer-border:#33363A;--media-pressed:rgba(68, 73, 80, 0.35);--messenger-card-background:#242526;--messenger-card-box-shadow:0px 0px 16px rgba(0, 0, 0, 0.3);--mwp-header-background-color:var(--messenger-card-background);--mwp-header-button-color:var(--accent);--mwp-message-row-background:var(--messenger-card-background);--messenger-reply-background:#18191A;--overlay-alpha-80:rgba(0, 0, 0, 0.65);--overlay-on-media:rgba(0, 0, 0, 0.6);--nav-bar-background:#242526;--popover-card-background:var(--card-background);--nav-bar-background-gradient:linear-gradient(to top, #242526, rgba(36,37,38,.9), rgba(36,37,38,.7), rgba(36,37,38,.4), rgba(36,37,38,0));--nav-bar-background-gradient-wash:linear-gradient(to top, #18191A, rgba(24,25,26,.9), rgba(24,25,26,.7), rgba(24,25,26,.4), rgba(24,25,26,0));--negative:hsl(350, 87%, 55%);--negative-background:hsl(350, 87%, 55%, 20%);--new-notification-background:#E7F3FF;--non-media-pressed:rgba(68, 73, 80, 0.15);--non-media-pressed-on-dark:rgba(255, 255, 255, 0.3);--notification-badge:#e41e3f;--placeholder-icon:#8A8D91;--placeholder-image:rgb(164, 167, 171);--placeholder-text:#8A8D91;--placeholder-text-on-media:rgba(255, 255, 255, 0.5);--popover-background:#3E4042;--positive:#31A24C;--positive-background:#1F3520;--press-overlay:rgba(255, 255, 255, 0.2);--primary-button-background:#0095F6;--primary-button-icon:#FFFFFF;--primary-button-pressed:#77A7FF;--primary-button-text:#FFFFFF;--primary-deemphasized-button-background:rgba(45, 136, 255, 0.2);--primary-deemphasized-button-pressed:rgba(24, 119, 242, 0.2);--primary-deemphasized-button-pressed-overlay:rgba(25, 110, 255, 0.15);--primary-deemphasized-button-text:#2D88FF;--primary-icon:#E4E6EB;--primary-text:#E4E6EB;--primary-text-on-media:white;--primary-web-focus-indicator:#D24294;--progress-ring-neutral-background:rgba(255, 255, 255, 0.2);--progress-ring-neutral-foreground:#ffffff;--progress-ring-on-media-background:rgba(255, 255, 255, 0.2);--progress-ring-on-media-foreground:#FFFFFF;--progress-ring-blue-background:rgba(45, 136, 255, 0.2);--progress-ring-blue-foreground:hsl(214, 100%, 59%);--progress-ring-disabled-background:rgba(122,125,130, 0.2);--progress-ring-disabled-foreground:#7A7D82;--rating-star-active:#FF9831;--scroll-thumb:rgba(255, 255, 255, 0.3);--scroll-shadow:0 1px 2px rgba(0, 0, 0, 0.1), 0 -1px rgba(255, 255, 255, 0.05) inset;--secondary-button-background:rgba(255,255,255,.1);--secondary-button-background-floating:#4B4C4F;--secondary-button-background-on-dark:rgba(255, 255, 255, 0.4);--secondary-button-pressed:rgba(0, 0, 0, 0.05);--secondary-button-stroke:transparent;--secondary-button-text:#E4E6EB;--secondary-icon:#B0B3B8;--secondary-text:#B0B3B8;--secondary-text-on-media:rgba(255, 255, 255, 0.9);--section-header-text:#BCC0C4;--shadow-1:rgba(0, 0, 0, 0.1);--shadow-2:rgba(0, 0, 0, 0.2);--shadow-5:rgba(0, 0, 0, 0.5);--shadow-8:rgba(0, 0, 0, 0.8);--shadow-base:0 1px 2px var(--shadow-2);--shadow-elevated:0 8px 20px 0 rgba(0, 0, 0, 0.2), 0 2px 4px 0 rgba(0, 0, 0, 0.1);--shadow-emphasis:0 2px 12px var(--shadow-2);--shadow-inset:rgba(255, 255, 255, 0.05);--shadow-on-media:0px 0px 1px rgba(0, 0, 0, 0.62);--shadow-persistent:0px 0px 12px rgba(28, 43, 51, 0.6);--shadow-primary:0px 0px 12px rgba(28, 43, 51, 0.1);--shadow-responsive:0px 8px 16px 0px rgba(0, 0, 0, 0.1);--surface-background:#242526;--switch-active:hsl(214, 100%, 59%);--switch-inactive:#3E4042;--switch-unchecked-background-color:#6F7276;--text-highlight:rgba(24, 119, 242, 0.45);--input-background:#242526;--input-background-hover:var(--input-background);--input-background-warn-hover:hsla(var(--warning-h), var(--warning-s), var(--warning-l), 0.05);--input-background-error-hover:hsla(var(--negative-h), var(--negative-s), var(--negative-l), 0.05);--input-background-active:hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.05);--input-background-warn-active:hsla(var(--warning-h), var(--warning-s), var(--warning-l), 0.05);--input-background-error-active:hsla(var(--negative-h), var(--negative-s), var(--negative-l), 0.05);--input-background-disabled:#18191A;--input-border-color:#3E4042;--input-border-color-hover:var(--placeholder-text);--input-label-color-highlighted:hsl(214, 100%, 59%);--input-label-color-inside:var(--secondary-text);--input-label-color-error:var(--negative);--input-label-color-disabled:var(--disabled-text);--text-input-outside-label:#FFFFFF;--toast-background:#242526;--toast-text:#FFFFFF;--toast-text-link:#4599FF;--toast-border-color:transparent;--toast-border-style:none;--toast-border-width:0px;--toggle-active-background:rgb(45, 136, 255);--toggle-active-icon:#FFFFFF;--toggle-active-text:#FFFFFF;--toggle-button-active-background:#E6F2FF;--tooltip-background:rgba(11, 11, 11, 0.8);--tooltip-box-shadow:0 2px 4px 0 var(--shadow-5);--popover-border-color:transparent;--wash:#3E4042;--web-wash:#18191A;--warning:hsl(40, 89%, 52%);--chat-bubble-emphasis-ring-after:white;--chat-bubble-emphasis-ring-before:black;--chat-text-blockquote-color-background-line:rgba(255, 255, 255, 0.19);--chat-text-blockquote-color-text-primary-media:rgba(255, 255, 255, 0.7);--chat-incoming-message-bubble-background-color:#303030;--chat-outgoing-message-bubble-background-color:var(--accent);--chat-replied-message-background-color:rgba(255, 255, 255, 0.12);--radio-border-color:var(--primary-icon);--radio-border-color-disabled:var(--disabled-button-background);--radio-border-color-selected:var(--accent);--radio-checked-icon-color:var(--accent);--radio-checked-icon-color-disabled:var(--disabled-button-background);--dialog-anchor-vertical-padding:56px;--header-height:0px;--global-panel-width:0px;--global-panel-width-expanded:0px;--alert-banner-corner-radius:8px;--button-corner-radius:4px;--button-corner-radius-medium:10px;--button-corner-radius-large:12px;--button-height-large:40px;--button-height-medium:36px;--button-padding-horizontal-large:16px;--button-padding-horizontal-medium:16px;--button-padding-icon-only:16px;--button-icon-padding-large:16px;--button-icon-padding-medium:16px;--button-inner-icon-spacing-large:3px;--button-inner-icon-spacing-medium:3px;--blueprint-button-height-medium:40px;--blueprint-button-height-large:48px;--card-corner-radius:4px;--card-box-shadow:0 12px 28px 0 var(--shadow-2), 0 2px 4px 0 var(--shadow-1);--card-padding-horizontal:10px;--card-padding-vertical:20px;--chip-corner-radius:6px;--comment-bubble:18px;--dialog-corner-radius:8px;--glimmer-corner-radius:8px;--image-corner-radius:4px;--infochip-medium-radius:12px;--input-corner-radius:6px;--input-border-width:1px;--nav-list-cell-corner-radius:8px;--list-cell-corner-radius:8px;--list-cell-min-height:52px;--list-cell-padding-vertical:20px;--list-cell-padding-vertical-with-addon:14px;--menu-base-list-item-padding-horizontal:8px;--menu-base-list-item-padding-vertical:12px;--menu-base-size-full-margin-end:48px;--menu-item-base-margin-horizontal:8px;--menu-item-base-margin-vertical:0px;--menu-item-base-padding-horizontal:8px;--menu-item-base-overlay-radius:4px;--menu-item-base-padding-vertical:12px;--menu-item-base-with-icon-padding-horizontal:var(--menu-item-base-padding-horizontal);--separator-menu-item-margin-horizontal:16px;--separator-menu-item-margin-vertical:4px;--nav-list-cell-min-height:0px;--nav-list-cell-padding-vertical:16px;--nav-list-cell-padding-vertical-with-addon:16px;--nux-card-body-padding-end:24px;--page-footer-padding-vertical:16px;--popover-border-style:none;--popover-border-width:0px;--section-header-addOnEnd-margin-horizontal:8px;--section-header-addOnStart-margin-horizontal:12px;--section-header-addOnEnd-button-padding-horizontal:0px;--section-header-addOnEnd-button-padding-vertical:0px;--section-header-padding-vertical:16px;--section-header-subtitle-margin-vertical:14px;--section-header-subtitle-with-addOnEnd-margin-vertical:6px;--tab-height:60px;--tab-icon-padding-end:0px;--tab-text-icon-gap:4px;--tab-underline-color:transparent;--tab-underline-height:3px;--text-badge-corner-radius:4px;--text-badge-padding-horizontal:6px;--text-badge-padding-vertical:6px;--text-input-multi-padding-between-text-scrollbar:20px;--text-input-multi-padding-scrollbar:16px;--text-input-caption-margin-top:10px;--text-input-padding-vertical:12px;--toast-addon-padding-horizontal:6px;--toast-addon-padding-vertical:6px;--toast-container-max-width:100%;--toast-container-min-width:288px;--toast-container-padding-horizontal:10px;--toast-container-padding-vertical:16px;--toast-corner-radius:8px;--toaster-view-max-width:328px;--tooltip-corner-radius:8px;--typeahead-list-outer-padding-vertical:2px;--fds-animation-enter-exit-in:cubic-bezier(0.14, 1, 0.34, 1);--fds-animation-enter-exit-out:cubic-bezier(0.45, 0.1, 0.2, 1);--fds-animation-swap-shuffle-in:cubic-bezier(0.14, 1, 0.34, 1);--fds-animation-swap-shuffle-out:cubic-bezier(0.45, 0.1, 0.2, 1);--fds-animation-move-in:cubic-bezier(0.17, 0.17, 0, 1);--fds-animation-move-out:cubic-bezier(0.17, 0.17, 0, 1);--fds-animation-expand-collapse-in:cubic-bezier(0.17, 0.17, 0, 1);--fds-animation-expand-collapse-out:cubic-bezier(0.17, 0.17, 0, 1);--fds-animation-passive-move-in:cubic-bezier(0.5, 0, 0.1, 1);--fds-animation-passive-move-out:cubic-bezier(0.5, 0, 0.1, 1);--fds-animation-quick-move-in:cubic-bezier(0.1, 0.9, 0.2, 1);--fds-animation-quick-move-out:cubic-bezier(0.1, 0.9, 0.2, 1);--fds-animation-fade-in:cubic-bezier(0, 0, 1, 1);--fds-animation-fade-out:cubic-bezier(0, 0, 1, 1);--fds-duration-extra-extra-short-in:100ms;--fds-duration-extra-extra-short-out:100ms;--fds-duration-extra-short-in:200ms;--fds-duration-extra-short-out:150ms;--fds-duration-short-in:280ms;--fds-duration-short-out:200ms;--fds-duration-medium-in:400ms;--fds-duration-medium-out:350ms;--fds-duration-long-in:500ms;--fds-duration-long-out:350ms;--fds-duration-extra-long-in:1000ms;--fds-duration-extra-long-out:1000ms;--fds-duration-none:0ms;--fds-fast:200ms;--fds-slow:400ms;--font-family-apple:system-ui, -apple-system, BlinkMacSystemFont, '.SFNSText-Regular', sans-serif;--font-family-code:ui-monospace, Menlo, Consolas, Monaco, monospace;--font-family-default:Helvetica, Arial, sans-serif;--font-family-segoe:Segoe UI Historic, Segoe UI, Helvetica, Arial, sans-serif;--font-family-system-fds:system-ui, -apple-system, BlinkMacSystemFont, Segoe UI Historic, Segoe UI, Helvetica, Arial, sans-serif;--text-input-field-font-family:Placeholder Font;--text-input-field-font-size:1rem;--text-input-field-font-stretch:initial;--text-input-field-font-weight:500;--text-input-field-line-height:1.2941;--text-input-label-font-family:Placeholder Font;--text-input-label-font-size:17px;--text-input-label-font-size-scale-multiplier:0.75;--text-input-label-font-stretch:initial;--text-input-label-font-weight:400;--text-input-label-line-height:1.2941;--messenger-card-min-width:300px;--messenger-card-max-width:480px;--messenger-application-max-width:2560px;--messenger-sidebar-collapsed-width:44px;--messenger-sidebar-expanded-width:240px;--messenger-card-corner-radius:8px;--messenger-card-spacing:16px;--chat-bubble-padding-vertical:8px;--chat-bubble-padding-horizontal:12px;--chat-bubble-border-radius:18px;--dialog-size-medium-width:100%;--dialog-size-small-width:100%;--focus-ring-outline-forced-colors:2px auto transparent !important;--focus-ring-outline-link:2px auto var(--focus-ring-blue);--focus-ring-shadow-default:0 0 0 2px var(--always-white), 0 0 0 4px var(--focus-ring-blue);--focus-ring-shadow-inset:0 0 0 2px var(--focus-ring-blue) inset, 0 0 0 4px var(--always-white) inset;--glimmer-animation-direction:alternate;--glimmer-animation-duration:1000ms;--glimmer-animation-timing-function:steps(10, end);--radio-checked-icon-size-large:12px;--radio-checked-icon-size-medium:12px;--radio-border-width:2px;--radio-size-large:24px;--radio-size-medium:20px;--blue-primary:rgb(0,136,244);--blue-secondary:rgb(235,245,255);--blue-tertiary:rgb(4,59,114);--chartreuse-primary:rgb(106,147,22);--chartreuse-secondary:rgb(226,255,152);--chartreuse-tertiary:rgb(50,65,19);--cyan-primary:rgb(0,142,213);--cyan-secondary:rgb(231,245,255);--cyan-tertiary:rgb(15,63,93);--dataviz-primary-2:rgb(156,219,255);--dataviz-primary-3:rgb(73,156,255);--dataviz-secondary-1:rgb(92,87,210);--dataviz-secondary-2:rgb(142,129,255);--dataviz-secondary-3:rgb(119,45,88);--dataviz-supplementary-1:rgb(253,91,67);--dataviz-supplementary-2:rgb(161,132,0);--dataviz-supplementary-3:rgb(36,131,44);--dataviz-supplementary-4:rgb(232,234,238);--fuschia-primary:rgb(250,45,138);--fuschia-secondary:rgb(255,241,246);--fuschia-tertiary:rgb(118,14,62);--green-primary:rgb(43,154,53);--green-secondary:rgb(227,250,224);--green-tertiary:rgb(26,68,27);--magenta-primary:rgb(215,77,204);--magenta-secondary:rgb(255,239,254);--magenta-tertiary:rgb(96,36,91);--orange-primary:rgb(208,108,20);--orange-secondary:rgb(255,241,239);--orange-tertiary:rgb(94,49,14);--purple-primary:rgb(125,116,255);--purple-secondary:rgb(245,241,255);--purple-tertiary:rgb(55,50,121);--red-primary:rgb(251,60,68);--red-secondary:rgb(255,241,239);--red-tertiary:rgb(118,22,27);--teal-primary:rgb(0,152,124);--teal-secondary:rgb(227,247,241);--teal-tertiary:rgb(10,68,56);--yellow-primary:rgb(161,132,0);--yellow-secondary:rgb(255,246,161);--yellow-tertiary:rgb(72,59,12);--base-unit:4px;--blue-0:245, 251, 255;--blue-1:224, 241, 255;--blue-2:179, 219, 255;--blue-3:112, 188, 255;--blue-4:71, 175, 255;--blue-5:0, 149, 246;--blue-6:0, 116, 204;--blue-7:0, 87, 163;--blue-8:0, 55, 107;--blue-9:0, 41, 82;--breakpoint-medium-width:1536px;--breakpoint-small-width:1024px;--challenge-width:460px;--creation-header-height:43px;--creation-min-padding-x:32px;--creation-modal-max-height:898px;--creation-modal-min-height:391px;--creation-padding-x:64px;--creation-padding-y:112px;--creation-settings-width:340px;--cyan-5:39, 196, 245;--desktop-grid-item-margin:28px;--desktop-grid-item-margin-slim:4px;--desktop-nav-height:60px;--desktop-story-tray-bottom-margin:48px;--desktop-story-tray-bottom-margin-denser:24px;--direct-message-max-width:236px;--fb-signup-page-profile-pic-size:88px;--feed-sidebar-width:319px;--feed-width:470px;--feed-width-wide-story:630px;--font-family-system:-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;--font-family-system-prism:"Instagram Sans UI", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;--font-weight-system-bold:700;--font-weight-system-extra-bold:800;--font-weight-system-extra-light:200;--font-weight-system-light:300;--font-weight-system-medium:500;--font-weight-system-regular:400;--font-weight-system-semibold:600;--footer-width-wide:1150px;--gradient-lavender:211, 0, 197;--gradient-orange:255, 122, 0;--gradient-pink:255, 1, 105;--gradient-purple:118, 56, 250;--gradient-red:255, 48, 64;--gradient-yellow:255, 214, 0;--green-4:120, 222, 69;--green-5:88, 195, 34;--green-6:55, 166, 0;--grey-0:245, 245, 245;--grey-1:239, 239, 239;--grey-2:219, 219, 219;--grey-3:199, 199, 199;--grey-4:168, 168, 168;--grey-5:142, 142, 142;--grey-6:115, 115, 115;--grey-7:85, 85, 85;--grey-8:54, 54, 54;--grey-9:38, 38, 38;--grey-10:26, 26, 26;--igds-dialog-border-radius:24px;--igds-menu-border-radius:20px;--ig-animation-move-in:cubic-bezier(0.17, 0.17, 0, 1);--ig-animation-move-out:cubic-bezier(0.17, 0.17, 0, 1);--ig-badge:255, 48, 64;--ig-close-friends-refreshed:28, 209, 79;--ig-duration-extra-extra-short-in:100ms;--ig-duration-extra-extra-short-out:100ms;--ig-error-or-destructive:237, 73, 86;--ig-facebook-blue:53, 121, 234;--ig-input-border-radius:12px;--ig-input-border-width:1px;--ig-live-badge:255, 1, 105;--ig-primary-button:0, 149, 246;--ig-primary-button-hover:24, 119, 242;--ig-secondary-icon:142, 142, 142;--ig-stroke-on-media:255, 255, 255;--ig-tertiary-button-background:255, 255, 255;--ig-tertiary-button-border:219, 219, 219;--ig-tertiary-button-hover:245, 245, 245;--ig-tertiary-button-text:38, 38, 38;--ig-subscribers-only:118, 56, 250;--ig-success:88, 195, 34;--ig-text-input-padding-vertical:20px;--ig-text-on-color:255, 255, 255;--ig-text-on-media:255, 255, 255;--in-feed-story-item-padding:12px;--input-border-radius:6px;--live-video-border-radius:4px;--media-info:335px;--medium-screen-max:875px;--medium-screen-min:736px;--mobile-grid-item-margin:2px;--mobile-nav-height:45px;--modal-backdrop-dark:rgba(0, 0, 0, 0.85);--modal-backdrop-default:rgba(0, 0, 0, 0.65);--modal-border-radius:12px;--modal-padding:16px;--modal-z-index:100;--nav-narrow-width:72px;--nav-medium-width:244px;--nav-wide-width:335px;--nav-bottom-screen-max:767px;--nav-narrow-screen-min:768px;--nav-medium-screen-min:1264px;--nav-wide-screen-min:1920px;--orange-5:253, 141, 50;--photo:600px;--pink-5:209, 8, 105;--polaris-feed-with-padding-threshold-min:640px;--polaris-extra-small-screen-max:413px;--polaris-small-screen-min:414px;--polaris-small-screen-max:735px;--polaris-medium-screen-min:736px;--polaris-medium-screen-max:875px;--polaris-large-screen-min:876px;--polaris-nav-bottom-screen-max:767px;--polaris-post-modal-small-screen-max:1366px;--polaris-post-modal-large-screen-min:1536px;--polaris-post-modal-large-height-max:1032px;--polaris-challenge-width:460px;--polaris-breakpoint-medium-width:1536px;--polaris-breakpoint-small-width:1024px;--polaris-site-width-narrow:600px;--polaris-site-width-wide:935px;--polaris-site-padding-top:30px;--polaris-tablet-screen-max:1136px;--purple-5:163, 7, 186;--red-4:255, 104, 116;--red-5:237, 73, 86;--red-6:198, 35, 48;--red-7:167, 3, 17;--revamp-nav-bottom-toolbar-height:50px;--revamp-feed-card-media-min-width:390px;--revamp-feed-card-dense-padding:16px;--revamp-feed-item-spacing:20px;--right-rail-width:300px;--scrollable-content-header-height-large:56px;--scrollable-content-header-height-med:49px;--scrollable-content-header-height:44px;--search-box-height:40px;--search-modal-height-expanded:450px;--search-modal-height:362px;--search-modal-top-offset:12px;--search-result-height:50px;--search-result-list-width:375px;--site-width-narrow:600px;--site-width-wide:935px;--small-layout-max:1079px;--small-screen-max:735px;--small-screen-min:414px;--story-progressbar-update-tick:0.1s;--story-swap-animation-duration:350ms;--system-10-font-size:10px;--system-10-line-height:12px;--system-11-font-size:11px;--system-11-line-height:13px;--system-12-font-size:12px;--system-12-line-height:16px;--system-14-font-size:14px;--system-14-line-height:18px;--system-16-font-size:16px;--system-16-line-height:20px;--system-18-font-size:18px;--system-18-line-height:24px;--system-20-font-size:20px;--system-20-line-height:25px;--system-22-font-size:22px;--system-22-line-height:26px;--system-24-font-size:24px;--system-24-line-height:27px;--system-26-font-size:26px;--system-26-line-height:28px;--system-28-font-size:28px;--system-28-line-height:32px;--system-30-font-size:30px;--system-30-line-height:36px;--system-32-font-size:32px;--system-32-line-height:40px;--web-always-black:0, 0, 0;--web-always-white:255, 255, 255;--web-overlay-on-media:38, 38, 38;--web-secondary-action:224, 241, 255;--yellow-5:253, 203, 92;--barcelona-logo:255, 255, 255;--challenge-link:219, 219, 219;--ig-banner-background:38, 38, 38;--ig-elevated-background:38, 38, 38;--ig-elevated-highlight-background:54, 54, 54;--ig-elevated-separator:54, 54, 54;--ig-focus-stroke:85, 85, 85;--ig-highlight-background:38, 38, 38;--ig-hover-overlay:255, 255, 255, 0.1;--ig-link:224, 241, 255;--ig-primary-background:0, 0, 0;--ig-primary-icon:245, 245, 245;--ig-primary-text:245, 245, 245;--ig-secondary-background:26, 26, 26;--ig-secondary-button:245, 245, 245;--ig-secondary-button-background:85, 85, 85, 0.7;--ig-secondary-button-hover:54, 54, 54;--ig-secondary-text:168, 168, 168;--ig-separator:38, 38, 38;--ig-stroke:54, 54, 54;--ig-temporary-highlight:0, 149, 246;--ig-tertiary-icon:115, 115, 115;--ig-tertiary-text:115, 115, 115;--post-separator:38, 38, 38;--tos-box-shadow:255, 255, 255;--ig-toggle-background-on-prism:248, 249, 249;--ig-toggle-background-off-prism:43, 48, 54;--ig-toggle-background-disabled-on-prism:106, 113, 122;--ig-toggle-background-disabled-off-prism:37, 41, 46;--ig-toggle-outline-prism:219, 223, 228;--ig-toggle-outline-disabled-prism:94, 100, 109;--ig-stroke-prism:12, 16, 20;--ig-stroke-disabled-on-prism:43, 48, 54;--ig-stroke-disabled-off-prism:33, 35, 40;--ig-dropdown-background:37, 41, 46;--ig-colors-button-borderless-background--disabled:220, 224, 229;--ig-colors-button-borderless-text:112, 141, 255;--ig-colors-button-borderless-text--disabled:24, 32, 139;--ig-colors-button-borderless-text--hover:133, 161, 255;--ig-colors-button-borderless-text--pressed:163, 188, 255;--ig-colors-button-primary-background:74, 93, 249;--ig-colors-button-primary-background--disabled:24, 32, 139;--ig-colors-button-primary-background--hover:65, 80, 247;--ig-colors-button-primary-background--pressed:65, 80, 247;--ig-colors-button-primary-link-text:133, 161, 255;--ig-colors-button-primary-link-text--disabled:31, 40, 173;--ig-colors-button-primary-link-text--hover:163, 188, 255;--ig-colors-button-primary-link-text--pressed:184, 205, 255;--ig-colors-button-primary-text:255, 255, 255;--ig-colors-button-primary-text--disabled:white-00;--ig-colors-button-secondary-background:37, 41, 46;--ig-colors-button-secondary-background--disabled:43, 48, 54;--ig-colors-button-secondary-background--hover:54, 60, 68;--ig-colors-button-secondary-background--pressed:54, 60, 68;--ig-colors-button-secondary-link-text:255, 255, 255;--ig-colors-button-secondary-link-text--disabled:162, 170, 180;--ig-colors-button-secondary-link-text--hover:255, 255, 255;--ig-colors-button-secondary-link-text--pressed:255, 255, 255;--ig-colors-button-secondary-text:255, 255, 255;--ig-colors-button-secondary-text--disabled:162, 170, 180;--ig-colors-link-text:112, 141, 255;--ig-input-border-primary:248, 249, 249;--ig-input-border-secondary:94, 100, 109;--ig-input-disabled-background-color:37, 41, 46;--ig-input-text-and-icon-primary:248, 249, 249;--ig-input-text-and-icon-secondary:162, 170, 180;--ig-menu-background-color:38, 43, 49;--ig-menu-text-color:248, 249, 249;--ig-tab-underline-active:248, 249, 249;--ig-tablist-border:43, 48, 54;--status-alert:254, 97, 114;--status-positive:28, 209, 100;}}.__ig-dark-mode:root, .__ig-dark-mode {--fds-black:black;--fds-black-alpha-05:rgba(0, 0, 0, 0.05);--fds-black-alpha-10:rgba(0, 0, 0, 0.1);--fds-black-alpha-15:rgba(0, 0, 0, 0.15);--fds-black-alpha-20:rgba(0, 0, 0, 0.2);--fds-black-alpha-30:rgba(0, 0, 0, 0.3);--fds-black-alpha-40:rgba(0, 0, 0, 0.4);--fds-black-alpha-50:rgba(0, 0, 0, 0.5);--fds-black-alpha-60:rgba(0, 0, 0, 0.6);--fds-black-alpha-80:rgba(0, 0, 0, 0.8);--fds-blue-05:black;--fds-blue-30:black;--fds-blue-40:black;--fds-blue-60:black;--fds-blue-70:black;--fds-blue-80:black;--fds-button-text:black;--fds-comment-background:black;--fds-dark-mode-gray-35:black;--fds-dark-mode-gray-50:black;--fds-dark-mode-gray-70:black;--fds-dark-mode-gray-80:black;--fds-dark-mode-gray-90:black;--fds-dark-mode-gray-100:black;--fds-gray-00:black;--fds-gray-05:black;--fds-gray-10:black;--fds-gray-20:black;--fds-gray-25:black;--fds-gray-30:black;--fds-gray-45:black;--fds-gray-70:black;--fds-gray-80:black;--fds-gray-90:black;--fds-gray-100:black;--fds-green-55:black;--fds-green-65:black;--fds-highlight:black;--fds-highlight-cell-background:black;--fds-primary-icon:white;--fds-primary-text:white;--fds-red-55:black;--fds-soft:cubic-bezier(.08,.52,.52,1);--fds-spectrum-aluminum-tint-70:black;--fds-spectrum-blue-gray-tint-70:black;--fds-spectrum-cherry:black;--fds-spectrum-cherry-tint-70:black;--fds-spectrum-grape-tint-70:black;--fds-spectrum-grape-tint-90:black;--fds-spectrum-lemon-dark-1:black;--fds-spectrum-lemon-tint-70:black;--fds-spectrum-lime:black;--fds-spectrum-lime-tint-70:black;--fds-spectrum-orange-tint-70:black;--fds-spectrum-orange-tint-90:black;--fds-spectrum-seafoam-tint-70:black;--fds-spectrum-slate-dark-2:black;--fds-spectrum-slate-tint-70:black;--fds-spectrum-teal:black;--fds-spectrum-teal-dark-1:black;--fds-spectrum-teal-dark-2:black;--fds-spectrum-teal-tint-70:black;--fds-spectrum-teal-tint-90:black;--fds-spectrum-tomato:black;--fds-spectrum-tomato-tint-30:black;--fds-spectrum-tomato-tint-90:black;--fds-strong:cubic-bezier(.12,.8,.32,1);--fds-unified-blue-35:black;--fds-unified-gray-20:black;--fds-white:black;--fds-white-alpha-05:rgba(255, 255, 255, 0.05);--fds-white-alpha-10:rgba(255, 255, 255, 0.1);--fds-white-alpha-20:rgba(255, 255, 255, 0.2);--fds-white-alpha-30:rgba(255, 255, 255, 0.3);--fds-white-alpha-40:rgba(255, 255, 255, 0.4);--fds-white-alpha-50:rgba(255, 255, 255, 0.5);--fds-white-alpha-60:rgba(255, 255, 255, 0.6);--fds-white-alpha-80:rgba(255, 255, 255, 0.8);--fds-yellow-20:black;--accent:#0095F6;--always-white:white;--always-black:black;--always-dark-gradient:linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.6));--always-dark-overlay:rgba(43, 48, 54, 0.8);--always-light-overlay:rgba(255, 255, 255, 0.4);--always-gray-40:#65676B;--always-gray-75:#BCC0C4;--always-gray-95:#F0F2F5;--attachment-footer-background:rgba(255,255,255,0.1);--background-deemphasized:rgba(255,255,255,0.1);--badge-background-color-blue:var(--accent);--badge-background-color-dark-gray:var(--secondary-icon);--badge-background-color-gray:var(--disabled-icon);--badge-background-color-green:var(--positive);--badge-background-color-light-blue:var(--highlight-bg);--badge-background-color-red:var(--notification-badge);--badge-background-color-yellow:var(--base-lemon);--base-blue:#1877F2;--base-cherry:#F3425F;--base-grape:#9360F7;--base-lemon:#F7B928;--base-lime:#45BD62;--base-pink:#FF66BF;--base-seafoam:#54C7EC;--base-teal:#2ABBA7;--base-tomato:#FB724B;--text-badge-info-background:hsl(214, 100%, 59%);--text-badge-success-background:#31A24C;--text-badge-attention-background:hsl(40, 89%, 52%);--text-badge-critical-background:#e41e3f;--blue-link:#00376B;--border-focused:#8A8D91;--card-background:#242526;--card-background-flat:#323436;--comment-background:#3A3B3C;--comment-footer-background:#4E4F50;--dataviz-primary-1:rgb(0,174,143);--dataviz-blue-primary:#1D85FC;--dataviz-blue-secondary:#EBF5FF;--dataviz-orange:#D06C14;--disabled-button-background:rgba(255, 255, 255, 0.2);--disabled-button-text:rgba(255, 255, 255, 0.3);--disabled-icon:rgba(255, 255, 255, 0.3);--disabled-text:rgba(255, 255, 255, 0.3);--divider:#3E4042;--event-date:#F3425F;--fb-wordmark:#FFFFFF;--fb-logo:#0866FF;--filter-accent:invert(40%) sepia(52%) saturate(200%) saturate(200%) saturate(200%) saturate(189%) hue-rotate(191deg) brightness(103%) contrast(102%);--filter-always-white:invert(100%);--filter-disabled-icon:invert(100%) opacity(30%);--filter-placeholder-icon:invert(59%) sepia(11%) saturate(200%) saturate(135%) hue-rotate(176deg) brightness(96%) contrast(94%);--filter-primary-accent:invert(40%) sepia(52%) saturate(200%) saturate(200%) saturate(200%) saturate(189%) hue-rotate(191deg) brightness(103%) contrast(102%);--filter-primary-icon:invert(89%) sepia(6%) hue-rotate(185deg);--filter-secondary-button-icon-on-media:invert(100%);--filter-secondary-icon:invert(62%) sepia(98%) saturate(12%) hue-rotate(175deg) brightness(90%) contrast(96%);--filter-warning-icon:invert(77%) sepia(29%) saturate(200%) saturate(200%) saturate(200%) saturate(200%) saturate(200%) saturate(128%) hue-rotate(359deg) brightness(102%) contrast(107%);--filter-blue-link-icon:invert(73%) sepia(29%) saturate(200%) saturate(200%) saturate(200%) saturate(200%) saturate(200%) saturate(200%) saturate(103.25%) hue-rotate(189deg) brightness(101%) contrast(101%);--filter-positive:invert(37%) sepia(61%) saturate(200%) saturate(200%) saturate(200%) saturate(200%) saturate(115%) hue-rotate(91deg) brightness(97%) contrast(105%);--filter-primary-deemphasized-button-icon:brightness(0) saturate(100%) invert(63%) sepia(20%) saturate(1290%) hue-rotate(185deg) brightness(107%) contrast(101%);--filter-negative:invert(25%) sepia(33%) saturate(200%) saturate(200%) saturate(200%) saturate(200%) saturate(200%) saturate(200%) saturate(110%) hue-rotate(345deg) brightness(132%) contrast(96%);--focus-ring-blue:#1877F2;--glimmer-base-opaque:#FFFFFF;--glimmer-high-contrast-base-opaque:#FFFFFF;--glimmer-opacity-high-contrast-max:0.48;--glimmer-opacity-high-contrast-min:0.1;--glimmer-opacity-max:1;--glimmer-opacity-min:0.25;--glimmer-spinner-icon:white;--hero-banner-background:#E85D07;--hosted-view-selected-state:rgba(45, 136, 255, 0.1);--highlight-bg:rgba(24, 119, 242, .31);--hover-overlay:rgba(255, 255, 255, 0.1);--inverse-text:var(--always-white);--list-cell-chevron:#B0B3B8;--media-hover:rgba(68, 73, 80, 0.15);--media-inner-border:rgba(255, 255, 255, 0.05);--media-outer-border:#33363A;--media-pressed:rgba(68, 73, 80, 0.35);--messenger-card-background:#242526;--messenger-card-box-shadow:0px 0px 16px rgba(0, 0, 0, 0.3);--mwp-header-background-color:var(--messenger-card-background);--mwp-header-button-color:var(--accent);--mwp-message-row-background:var(--messenger-card-background);--messenger-reply-background:#18191A;--overlay-alpha-80:rgba(0, 0, 0, 0.65);--overlay-on-media:rgba(0, 0, 0, 0.6);--nav-bar-background:#242526;--popover-card-background:var(--card-background);--nav-bar-background-gradient:linear-gradient(to top, #242526, rgba(36,37,38,.9), rgba(36,37,38,.7), rgba(36,37,38,.4), rgba(36,37,38,0));--nav-bar-background-gradient-wash:linear-gradient(to top, #18191A, rgba(24,25,26,.9), rgba(24,25,26,.7), rgba(24,25,26,.4), rgba(24,25,26,0));--negative:hsl(350, 87%, 55%);--negative-background:hsl(350, 87%, 55%, 20%);--new-notification-background:#E7F3FF;--non-media-pressed:rgba(68, 73, 80, 0.15);--non-media-pressed-on-dark:rgba(255, 255, 255, 0.3);--notification-badge:#e41e3f;--placeholder-icon:#8A8D91;--placeholder-image:rgb(164, 167, 171);--placeholder-text:#8A8D91;--placeholder-text-on-media:rgba(255, 255, 255, 0.5);--popover-background:#3E4042;--positive:#31A24C;--positive-background:#1F3520;--press-overlay:rgba(255, 255, 255, 0.2);--primary-button-background:#0095F6;--primary-button-icon:#FFFFFF;--primary-button-pressed:#77A7FF;--primary-button-text:#FFFFFF;--primary-deemphasized-button-background:rgba(45, 136, 255, 0.2);--primary-deemphasized-button-pressed:rgba(24, 119, 242, 0.2);--primary-deemphasized-button-pressed-overlay:rgba(25, 110, 255, 0.15);--primary-deemphasized-button-text:#2D88FF;--primary-icon:#E4E6EB;--primary-text:#E4E6EB;--primary-text-on-media:white;--primary-web-focus-indicator:#D24294;--progress-ring-neutral-background:rgba(255, 255, 255, 0.2);--progress-ring-neutral-foreground:#ffffff;--progress-ring-on-media-background:rgba(255, 255, 255, 0.2);--progress-ring-on-media-foreground:#FFFFFF;--progress-ring-blue-background:rgba(45, 136, 255, 0.2);--progress-ring-blue-foreground:hsl(214, 100%, 59%);--progress-ring-disabled-background:rgba(122,125,130, 0.2);--progress-ring-disabled-foreground:#7A7D82;--rating-star-active:#FF9831;--scroll-thumb:rgba(255, 255, 255, 0.3);--scroll-shadow:0 1px 2px rgba(0, 0, 0, 0.1), 0 -1px rgba(255, 255, 255, 0.05) inset;--secondary-button-background:rgba(255,255,255,.1);--secondary-button-background-floating:#4B4C4F;--secondary-button-background-on-dark:rgba(255, 255, 255, 0.4);--secondary-button-pressed:rgba(0, 0, 0, 0.05);--secondary-button-stroke:transparent;--secondary-button-text:#E4E6EB;--secondary-icon:#B0B3B8;--secondary-text:#B0B3B8;--secondary-text-on-media:rgba(255, 255, 255, 0.9);--section-header-text:#BCC0C4;--shadow-1:rgba(0, 0, 0, 0.1);--shadow-2:rgba(0, 0, 0, 0.2);--shadow-5:rgba(0, 0, 0, 0.5);--shadow-8:rgba(0, 0, 0, 0.8);--shadow-base:0 1px 2px var(--shadow-2);--shadow-elevated:0 8px 20px 0 rgba(0, 0, 0, 0.2), 0 2px 4px 0 rgba(0, 0, 0, 0.1);--shadow-emphasis:0 2px 12px var(--shadow-2);--shadow-inset:rgba(255, 255, 255, 0.05);--shadow-on-media:0px 0px 1px rgba(0, 0, 0, 0.62);--shadow-persistent:0px 0px 12px rgba(28, 43, 51, 0.6);--shadow-primary:0px 0px 12px rgba(28, 43, 51, 0.1);--shadow-responsive:0px 8px 16px 0px rgba(0, 0, 0, 0.1);--surface-background:#242526;--switch-active:hsl(214, 100%, 59%);--switch-inactive:#3E4042;--switch-unchecked-background-color:#6F7276;--text-highlight:rgba(24, 119, 242, 0.45);--input-background:#242526;--input-background-hover:var(--input-background);--input-background-warn-hover:hsla(var(--warning-h), var(--warning-s), var(--warning-l), 0.05);--input-background-error-hover:hsla(var(--negative-h), var(--negative-s), var(--negative-l), 0.05);--input-background-active:hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.05);--input-background-warn-active:hsla(var(--warning-h), var(--warning-s), var(--warning-l), 0.05);--input-background-error-active:hsla(var(--negative-h), var(--negative-s), var(--negative-l), 0.05);--input-background-disabled:#18191A;--input-border-color:#3E4042;--input-border-color-hover:var(--placeholder-text);--input-label-color-highlighted:hsl(214, 100%, 59%);--input-label-color-inside:var(--secondary-text);--input-label-color-error:var(--negative);--input-label-color-disabled:var(--disabled-text);--text-input-outside-label:#FFFFFF;--toast-background:#242526;--toast-text:#FFFFFF;--toast-text-link:#4599FF;--toast-border-color:transparent;--toast-border-style:none;--toast-border-width:0px;--toggle-active-background:rgb(45, 136, 255);--toggle-active-icon:#FFFFFF;--toggle-active-text:#FFFFFF;--toggle-button-active-background:#E6F2FF;--tooltip-background:rgba(11, 11, 11, 0.8);--tooltip-box-shadow:0 2px 4px 0 var(--shadow-5);--popover-border-color:transparent;--wash:#3E4042;--web-wash:#18191A;--warning:hsl(40, 89%, 52%);--chat-bubble-emphasis-ring-after:white;--chat-bubble-emphasis-ring-before:black;--chat-text-blockquote-color-background-line:rgba(255, 255, 255, 0.19);--chat-text-blockquote-color-text-primary-media:rgba(255, 255, 255, 0.7);--chat-incoming-message-bubble-background-color:#303030;--chat-outgoing-message-bubble-background-color:var(--accent);--chat-replied-message-background-color:rgba(255, 255, 255, 0.12);--radio-border-color:var(--primary-icon);--radio-border-color-disabled:var(--disabled-button-background);--radio-border-color-selected:var(--accent);--radio-checked-icon-color:var(--accent);--radio-checked-icon-color-disabled:var(--disabled-button-background);--dialog-anchor-vertical-padding:56px;--header-height:0px;--global-panel-width:0px;--global-panel-width-expanded:0px;--alert-banner-corner-radius:8px;--button-corner-radius:4px;--button-corner-radius-medium:10px;--button-corner-radius-large:12px;--button-height-large:40px;--button-height-medium:36px;--button-padding-horizontal-large:16px;--button-padding-horizontal-medium:16px;--button-padding-icon-only:16px;--button-icon-padding-large:16px;--button-icon-padding-medium:16px;--button-inner-icon-spacing-large:3px;--button-inner-icon-spacing-medium:3px;--blueprint-button-height-medium:40px;--blueprint-button-height-large:48px;--card-corner-radius:4px;--card-box-shadow:0 12px 28px 0 var(--shadow-2), 0 2px 4px 0 var(--shadow-1);--card-padding-horizontal:10px;--card-padding-vertical:20px;--chip-corner-radius:6px;--comment-bubble:18px;--dialog-corner-radius:8px;--glimmer-corner-radius:8px;--image-corner-radius:4px;--infochip-medium-radius:12px;--input-corner-radius:6px;--input-border-width:1px;--nav-list-cell-corner-radius:8px;--list-cell-corner-radius:8px;--list-cell-min-height:52px;--list-cell-padding-vertical:20px;--list-cell-padding-vertical-with-addon:14px;--menu-base-list-item-padding-horizontal:8px;--menu-base-list-item-padding-vertical:12px;--menu-base-size-full-margin-end:48px;--menu-item-base-margin-horizontal:8px;--menu-item-base-margin-vertical:0px;--menu-item-base-padding-horizontal:8px;--menu-item-base-overlay-radius:4px;--menu-item-base-padding-vertical:12px;--menu-item-base-with-icon-padding-horizontal:var(--menu-item-base-padding-horizontal);--separator-menu-item-margin-horizontal:16px;--separator-menu-item-margin-vertical:4px;--nav-list-cell-min-height:0px;--nav-list-cell-padding-vertical:16px;--nav-list-cell-padding-vertical-with-addon:16px;--nux-card-body-padding-end:24px;--page-footer-padding-vertical:16px;--popover-border-style:none;--popover-border-width:0px;--section-header-addOnEnd-margin-horizontal:8px;--section-header-addOnStart-margin-horizontal:12px;--section-header-addOnEnd-button-padding-horizontal:0px;--section-header-addOnEnd-button-padding-vertical:0px;--section-header-padding-vertical:16px;--section-header-subtitle-margin-vertical:14px;--section-header-subtitle-with-addOnEnd-margin-vertical:6px;--tab-height:60px;--tab-icon-padding-end:0px;--tab-text-icon-gap:4px;--tab-underline-color:transparent;--tab-underline-height:3px;--text-badge-corner-radius:4px;--text-badge-padding-horizontal:6px;--text-badge-padding-vertical:6px;--text-input-multi-padding-between-text-scrollbar:20px;--text-input-multi-padding-scrollbar:16px;--text-input-caption-margin-top:10px;--text-input-padding-vertical:12px;--toast-addon-padding-horizontal:6px;--toast-addon-padding-vertical:6px;--toast-container-max-width:100%;--toast-container-min-width:288px;--toast-container-padding-horizontal:10px;--toast-container-padding-vertical:16px;--toast-corner-radius:8px;--toaster-view-max-width:328px;--tooltip-corner-radius:8px;--typeahead-list-outer-padding-vertical:2px;--fds-animation-enter-exit-in:cubic-bezier(0.14, 1, 0.34, 1);--fds-animation-enter-exit-out:cubic-bezier(0.45, 0.1, 0.2, 1);--fds-animation-swap-shuffle-in:cubic-bezier(0.14, 1, 0.34, 1);--fds-animation-swap-shuffle-out:cubic-bezier(0.45, 0.1, 0.2, 1);--fds-animation-move-in:cubic-bezier(0.17, 0.17, 0, 1);--fds-animation-move-out:cubic-bezier(0.17, 0.17, 0, 1);--fds-animation-expand-collapse-in:cubic-bezier(0.17, 0.17, 0, 1);--fds-animation-expand-collapse-out:cubic-bezier(0.17, 0.17, 0, 1);--fds-animation-passive-move-in:cubic-bezier(0.5, 0, 0.1, 1);--fds-animation-passive-move-out:cubic-bezier(0.5, 0, 0.1, 1);--fds-animation-quick-move-in:cubic-bezier(0.1, 0.9, 0.2, 1);--fds-animation-quick-move-out:cubic-bezier(0.1, 0.9, 0.2, 1);--fds-animation-fade-in:cubic-bezier(0, 0, 1, 1);--fds-animation-fade-out:cubic-bezier(0, 0, 1, 1);--fds-duration-extra-extra-short-in:100ms;--fds-duration-extra-extra-short-out:100ms;--fds-duration-extra-short-in:200ms;--fds-duration-extra-short-out:150ms;--fds-duration-short-in:280ms;--fds-duration-short-out:200ms;--fds-duration-medium-in:400ms;--fds-duration-medium-out:350ms;--fds-duration-long-in:500ms;--fds-duration-long-out:350ms;--fds-duration-extra-long-in:1000ms;--fds-duration-extra-long-out:1000ms;--fds-duration-none:0ms;--fds-fast:200ms;--fds-slow:400ms;--font-family-apple:system-ui, -apple-system, BlinkMacSystemFont, '.SFNSText-Regular', sans-serif;--font-family-code:ui-monospace, Menlo, Consolas, Monaco, monospace;--font-family-default:Helvetica, Arial, sans-serif;--font-family-segoe:Segoe UI Historic, Segoe UI, Helvetica, Arial, sans-serif;--font-family-system-fds:system-ui, -apple-system, BlinkMacSystemFont, Segoe UI Historic, Segoe UI, Helvetica, Arial, sans-serif;--text-input-field-font-family:Placeholder Font;--text-input-field-font-size:1rem;--text-input-field-font-stretch:initial;--text-input-field-font-weight:500;--text-input-field-line-height:1.2941;--text-input-label-font-family:Placeholder Font;--text-input-label-font-size:17px;--text-input-label-font-size-scale-multiplier:0.75;--text-input-label-font-stretch:initial;--text-input-label-font-weight:400;--text-input-label-line-height:1.2941;--messenger-card-min-width:300px;--messenger-card-max-width:480px;--messenger-application-max-width:2560px;--messenger-sidebar-collapsed-width:44px;--messenger-sidebar-expanded-width:240px;--messenger-card-corner-radius:8px;--messenger-card-spacing:16px;--chat-bubble-padding-vertical:8px;--chat-bubble-padding-horizontal:12px;--chat-bubble-border-radius:18px;--dialog-size-medium-width:100%;--dialog-size-small-width:100%;--focus-ring-outline-forced-colors:2px auto transparent !important;--focus-ring-outline-link:2px auto var(--focus-ring-blue);--focus-ring-shadow-default:0 0 0 2px var(--always-white), 0 0 0 4px var(--focus-ring-blue);--focus-ring-shadow-inset:0 0 0 2px var(--focus-ring-blue) inset, 0 0 0 4px var(--always-white) inset;--glimmer-animation-direction:alternate;--glimmer-animation-duration:1000ms;--glimmer-animation-timing-function:steps(10, end);--radio-checked-icon-size-large:12px;--radio-checked-icon-size-medium:12px;--radio-border-width:2px;--radio-size-large:24px;--radio-size-medium:20px;--blue-primary:rgb(0,136,244);--blue-secondary:rgb(235,245,255);--blue-tertiary:rgb(4,59,114);--chartreuse-primary:rgb(106,147,22);--chartreuse-secondary:rgb(226,255,152);--chartreuse-tertiary:rgb(50,65,19);--cyan-primary:rgb(0,142,213);--cyan-secondary:rgb(231,245,255);--cyan-tertiary:rgb(15,63,93);--dataviz-primary-2:rgb(156,219,255);--dataviz-primary-3:rgb(73,156,255);--dataviz-secondary-1:rgb(92,87,210);--dataviz-secondary-2:rgb(142,129,255);--dataviz-secondary-3:rgb(119,45,88);--dataviz-supplementary-1:rgb(253,91,67);--dataviz-supplementary-2:rgb(161,132,0);--dataviz-supplementary-3:rgb(36,131,44);--dataviz-supplementary-4:rgb(232,234,238);--fuschia-primary:rgb(250,45,138);--fuschia-secondary:rgb(255,241,246);--fuschia-tertiary:rgb(118,14,62);--green-primary:rgb(43,154,53);--green-secondary:rgb(227,250,224);--green-tertiary:rgb(26,68,27);--magenta-primary:rgb(215,77,204);--magenta-secondary:rgb(255,239,254);--magenta-tertiary:rgb(96,36,91);--orange-primary:rgb(208,108,20);--orange-secondary:rgb(255,241,239);--orange-tertiary:rgb(94,49,14);--purple-primary:rgb(125,116,255);--purple-secondary:rgb(245,241,255);--purple-tertiary:rgb(55,50,121);--red-primary:rgb(251,60,68);--red-secondary:rgb(255,241,239);--red-tertiary:rgb(118,22,27);--teal-primary:rgb(0,152,124);--teal-secondary:rgb(227,247,241);--teal-tertiary:rgb(10,68,56);--yellow-primary:rgb(161,132,0);--yellow-secondary:rgb(255,246,161);--yellow-tertiary:rgb(72,59,12);--base-unit:4px;--blue-0:245, 251, 255;--blue-1:224, 241, 255;--blue-2:179, 219, 255;--blue-3:112, 188, 255;--blue-4:71, 175, 255;--blue-5:0, 149, 246;--blue-6:0, 116, 204;--blue-7:0, 87, 163;--blue-8:0, 55, 107;--blue-9:0, 41, 82;--breakpoint-medium-width:1536px;--breakpoint-small-width:1024px;--challenge-width:460px;--creation-header-height:43px;--creation-min-padding-x:32px;--creation-modal-max-height:898px;--creation-modal-min-height:391px;--creation-padding-x:64px;--creation-padding-y:112px;--creation-settings-width:340px;--cyan-5:39, 196, 245;--desktop-grid-item-margin:28px;--desktop-grid-item-margin-slim:4px;--desktop-nav-height:60px;--desktop-story-tray-bottom-margin:48px;--desktop-story-tray-bottom-margin-denser:24px;--direct-message-max-width:236px;--fb-signup-page-profile-pic-size:88px;--feed-sidebar-width:319px;--feed-width:470px;--feed-width-wide-story:630px;--font-family-system:-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;--font-family-system-prism:"Instagram Sans UI", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;--font-weight-system-bold:700;--font-weight-system-extra-bold:800;--font-weight-system-extra-light:200;--font-weight-system-light:300;--font-weight-system-medium:500;--font-weight-system-regular:400;--font-weight-system-semibold:600;--footer-width-wide:1150px;--gradient-lavender:211, 0, 197;--gradient-orange:255, 122, 0;--gradient-pink:255, 1, 105;--gradient-purple:118, 56, 250;--gradient-red:255, 48, 64;--gradient-yellow:255, 214, 0;--green-4:120, 222, 69;--green-5:88, 195, 34;--green-6:55, 166, 0;--grey-0:245, 245, 245;--grey-1:239, 239, 239;--grey-2:219, 219, 219;--grey-3:199, 199, 199;--grey-4:168, 168, 168;--grey-5:142, 142, 142;--grey-6:115, 115, 115;--grey-7:85, 85, 85;--grey-8:54, 54, 54;--grey-9:38, 38, 38;--grey-10:26, 26, 26;--igds-dialog-border-radius:24px;--igds-menu-border-radius:20px;--ig-animation-move-in:cubic-bezier(0.17, 0.17, 0, 1);--ig-animation-move-out:cubic-bezier(0.17, 0.17, 0, 1);--ig-badge:255, 48, 64;--ig-close-friends-refreshed:28, 209, 79;--ig-duration-extra-extra-short-in:100ms;--ig-duration-extra-extra-short-out:100ms;--ig-error-or-destructive:237, 73, 86;--ig-facebook-blue:53, 121, 234;--ig-input-border-radius:12px;--ig-input-border-width:1px;--ig-live-badge:255, 1, 105;--ig-primary-button:0, 149, 246;--ig-primary-button-hover:24, 119, 242;--ig-secondary-icon:142, 142, 142;--ig-stroke-on-media:255, 255, 255;--ig-tertiary-button-background:255, 255, 255;--ig-tertiary-button-border:219, 219, 219;--ig-tertiary-button-hover:245, 245, 245;--ig-tertiary-button-text:38, 38, 38;--ig-subscribers-only:118, 56, 250;--ig-success:88, 195, 34;--ig-text-input-padding-vertical:20px;--ig-text-on-color:255, 255, 255;--ig-text-on-media:255, 255, 255;--in-feed-story-item-padding:12px;--input-border-radius:6px;--live-video-border-radius:4px;--media-info:335px;--medium-screen-max:875px;--medium-screen-min:736px;--mobile-grid-item-margin:2px;--mobile-nav-height:45px;--modal-backdrop-dark:rgba(0, 0, 0, 0.85);--modal-backdrop-default:rgba(0, 0, 0, 0.65);--modal-border-radius:12px;--modal-padding:16px;--modal-z-index:100;--nav-narrow-width:72px;--nav-medium-width:244px;--nav-wide-width:335px;--nav-bottom-screen-max:767px;--nav-narrow-screen-min:768px;--nav-medium-screen-min:1264px;--nav-wide-screen-min:1920px;--orange-5:253, 141, 50;--photo:600px;--pink-5:209, 8, 105;--polaris-feed-with-padding-threshold-min:640px;--polaris-extra-small-screen-max:413px;--polaris-small-screen-min:414px;--polaris-small-screen-max:735px;--polaris-medium-screen-min:736px;--polaris-medium-screen-max:875px;--polaris-large-screen-min:876px;--polaris-nav-bottom-screen-max:767px;--polaris-post-modal-small-screen-max:1366px;--polaris-post-modal-large-screen-min:1536px;--polaris-post-modal-large-height-max:1032px;--polaris-challenge-width:460px;--polaris-breakpoint-medium-width:1536px;--polaris-breakpoint-small-width:1024px;--polaris-site-width-narrow:600px;--polaris-site-width-wide:935px;--polaris-site-padding-top:30px;--polaris-tablet-screen-max:1136px;--purple-5:163, 7, 186;--red-4:255, 104, 116;--red-5:237, 73, 86;--red-6:198, 35, 48;--red-7:167, 3, 17;--revamp-nav-bottom-toolbar-height:50px;--revamp-feed-card-media-min-width:390px;--revamp-feed-card-dense-padding:16px;--revamp-feed-item-spacing:20px;--right-rail-width:300px;--scrollable-content-header-height-large:56px;--scrollable-content-header-height-med:49px;--scrollable-content-header-height:44px;--search-box-height:40px;--search-modal-height-expanded:450px;--search-modal-height:362px;--search-modal-top-offset:12px;--search-result-height:50px;--search-result-list-width:375px;--site-width-narrow:600px;--site-width-wide:935px;--small-layout-max:1079px;--small-screen-max:735px;--small-screen-min:414px;--story-progressbar-update-tick:0.1s;--story-swap-animation-duration:350ms;--system-10-font-size:10px;--system-10-line-height:12px;--system-11-font-size:11px;--system-11-line-height:13px;--system-12-font-size:12px;--system-12-line-height:16px;--system-14-font-size:14px;--system-14-line-height:18px;--system-16-font-size:16px;--system-16-line-height:20px;--system-18-font-size:18px;--system-18-line-height:24px;--system-20-font-size:20px;--system-20-line-height:25px;--system-22-font-size:22px;--system-22-line-height:26px;--system-24-font-size:24px;--system-24-line-height:27px;--system-26-font-size:26px;--system-26-line-height:28px;--system-28-font-size:28px;--system-28-line-height:32px;--system-30-font-size:30px;--system-30-line-height:36px;--system-32-font-size:32px;--system-32-line-height:40px;--web-always-black:0, 0, 0;--web-always-white:255, 255, 255;--web-overlay-on-media:38, 38, 38;--web-secondary-action:224, 241, 255;--yellow-5:253, 203, 92;--barcelona-logo:255, 255, 255;--challenge-link:219, 219, 219;--ig-banner-background:38, 38, 38;--ig-elevated-background:38, 38, 38;--ig-elevated-highlight-background:54, 54, 54;--ig-elevated-separator:54, 54, 54;--ig-focus-stroke:85, 85, 85;--ig-highlight-background:38, 38, 38;--ig-hover-overlay:255, 255, 255, 0.1;--ig-link:224, 241, 255;--ig-primary-background:0, 0, 0;--ig-primary-icon:245, 245, 245;--ig-primary-text:245, 245, 245;--ig-secondary-background:26, 26, 26;--ig-secondary-button:245, 245, 245;--ig-secondary-button-background:85, 85, 85, 0.7;--ig-secondary-button-hover:54, 54, 54;--ig-secondary-text:168, 168, 168;--ig-separator:38, 38, 38;--ig-stroke:54, 54, 54;--ig-temporary-highlight:0, 149, 246;--ig-tertiary-icon:115, 115, 115;--ig-tertiary-text:115, 115, 115;--post-separator:38, 38, 38;--tos-box-shadow:255, 255, 255;--ig-toggle-background-on-prism:248, 249, 249;--ig-toggle-background-off-prism:43, 48, 54;--ig-toggle-background-disabled-on-prism:106, 113, 122;--ig-toggle-background-disabled-off-prism:37, 41, 46;--ig-toggle-outline-prism:219, 223, 228;--ig-toggle-outline-disabled-prism:94, 100, 109;--ig-stroke-prism:12, 16, 20;--ig-stroke-disabled-on-prism:43, 48, 54;--ig-stroke-disabled-off-prism:33, 35, 40;--ig-dropdown-background:37, 41, 46;--ig-colors-button-borderless-background--disabled:220, 224, 229;--ig-colors-button-borderless-text:112, 141, 255;--ig-colors-button-borderless-text--disabled:24, 32, 139;--ig-colors-button-borderless-text--hover:133, 161, 255;--ig-colors-button-borderless-text--pressed:163, 188, 255;--ig-colors-button-primary-background:74, 93, 249;--ig-colors-button-primary-background--disabled:24, 32, 139;--ig-colors-button-primary-background--hover:65, 80, 247;--ig-colors-button-primary-background--pressed:65, 80, 247;--ig-colors-button-primary-link-text:133, 161, 255;--ig-colors-button-primary-link-text--disabled:31, 40, 173;--ig-colors-button-primary-link-text--hover:163, 188, 255;--ig-colors-button-primary-link-text--pressed:184, 205, 255;--ig-colors-button-primary-text:255, 255, 255;--ig-colors-button-primary-text--disabled:white-00;--ig-colors-button-secondary-background:37, 41, 46;--ig-colors-button-secondary-background--disabled:43, 48, 54;--ig-colors-button-secondary-background--hover:54, 60, 68;--ig-colors-button-secondary-background--pressed:54, 60, 68;--ig-colors-button-secondary-link-text:255, 255, 255;--ig-colors-button-secondary-link-text--disabled:162, 170, 180;--ig-colors-button-secondary-link-text--hover:255, 255, 255;--ig-colors-button-secondary-link-text--pressed:255, 255, 255;--ig-colors-button-secondary-text:255, 255, 255;--ig-colors-button-secondary-text--disabled:162, 170, 180;--ig-colors-link-text:112, 141, 255;--ig-input-border-primary:248, 249, 249;--ig-input-border-secondary:94, 100, 109;--ig-input-disabled-background-color:37, 41, 46;--ig-input-text-and-icon-primary:248, 249, 249;--ig-input-text-and-icon-secondary:162, 170, 180;--ig-menu-background-color:38, 43, 49;--ig-menu-text-color:248, 249, 249;--ig-tab-underline-active:248, 249, 249;--ig-tablist-border:43, 48, 54;--status-alert:254, 97, 114;--status-positive:28, 209, 100;}</style><style data-btmanifest="1027280358_main" nonce="2Mv94Jjk">@media (prefers-color-scheme: dark) {:root{background:#000;}}</style><script id="envjson" type="application/json" nonce="2Mv94Jjk">{"useTrustedTypes":false,"isTrustedTypesReportOnly":false,"routing_namespace":"igx_www$a$87a091182d5bd65bcb043a2888004e09","ig_server_override":"","sjsListenerNew":true,"ssr_throttle_suspense_fallbacks":false,"react_scheduler_enable_paint_ig":false,"compat_iframe_token":null,"clear_js_factory_after_used":true,"brsid":"7551447608877786948","promise_include_trace":false}</script><script nonce="2Mv94Jjk" src="data:application/x-javascript; charset=utf-8;base64,Oy8qRkJfUEtHX0RFTElNKi8KCnZhciBkYXRhRWxlbWVudD1kb2N1bWVudC5nZXRFbGVtZW50QnlJZCgiZW52anNvbiIpO2lmKGRhdGFFbGVtZW50IT1udWxsKXt2YXIgY29weVZhcmlhYmxlcz1mdW5jdGlvbihhKXtmb3IodmFyIGIgaW4gdmFyaWFibGVzKWFbYl09dmFyaWFibGVzW2JdfSx2YXJpYWJsZXM9SlNPTi5wYXJzZShkYXRhRWxlbWVudC50ZXh0Q29udGVudCk7d2luZG93LnJlcXVpcmVMYXp5P3dpbmRvdy5yZXF1aXJlTGF6eShbIkVudiJdLGNvcHlWYXJpYWJsZXMpOih3aW5kb3cuRW52PXdpbmRvdy5FbnZ8fHt9LGNvcHlWYXJpYWJsZXMod2luZG93LkVudikpfQovLyMgc291cmNlVVJMPWh0dHBzOi8vc3RhdGljLmNkbmluc3RhZ3JhbS5jb20vcnNyYy5waHAvdjQveUwvci9kYmdyTXNuRDE4cC5qcwo=" data-bootloader-hash="nxRKQO6" crossorigin="anonymous" data-p=":0" data-btmanifest="1027280358_main" data-c="1"></script><script nonce="2Mv94Jjk" src="data:application/x-javascript; charset=utf-8;base64,Oy8qRkJfUEtHX0RFTElNKi8KCl9fYW5ub3RhdG9yPWZ1bmN0aW9uKGEpe3JldHVybiBhfSxfX2Rfc3R1Yj1bXSxfX2Q9ZnVuY3Rpb24oYSxiLGMsZCl7X19kX3N0dWIucHVzaChbYSxiLGMsZF0pfSxfX3JsX3N0dWI9W10scmVxdWlyZUxhenk9ZnVuY3Rpb24oKXtfX3JsX3N0dWIucHVzaChhcmd1bWVudHMpfTsKLy8jIHNvdXJjZVVSTD1odHRwczovL3N0YXRpYy5jZG5pbnN0YWdyYW0uY29tL3JzcmMucGhwL3Y0L3kyL3IvY01kX1Nab3Y5RWkuanMK" data-bootloader-hash="W7CcKyc" crossorigin="anonymous" data-p=":0" data-btmanifest="1027280358_main" data-c="1"></script><script nonce="2Mv94Jjk" src="data:application/x-javascript; charset=utf-8;base64,Oy8qRkJfUEtHX0RFTElNKi8KCl9idGxkcj17fSxfbm93SW5sPWZ1bmN0aW9uKCl7dmFyIGE9d2luZG93LnBlcmZvcm1hbmNlO3JldHVybiBhJiZhLm5vdyYmYS50aW1pbmcmJmEudGltaW5nLm5hdmlnYXRpb25TdGFydD9hLm5vdygpK2EudGltaW5nLm5hdmlnYXRpb25TdGFydDpuZXcgRGF0ZSgpLmdldFRpbWUoKX0sX3FwbElubD1mdW5jdGlvbigpe3ZhciBhPXtjbGllbnQ6e319O3JldHVybnthZGRQb2ludDpmdW5jdGlvbihiKXthLmNsaWVudFtiXT1fbm93SW5sKCl9LGdldFBvaW50czpmdW5jdGlvbigpe3JldHVybiBhfX19KCksX3FwbElubC5hZGRQb2ludCgiaHRtbEZsdXNoIik7Ci8vIyBzb3VyY2VVUkw9aHR0cHM6Ly9zdGF0aWMuY2RuaW5zdGFncmFtLmNvbS9yc3JjLnBocC92NC95Qi9yL292OWgtVjhMS0tULmpzCg==" data-bootloader-hash="678jA6i" crossorigin="anonymous" data-p=":0" data-btmanifest="1027280358_main" data-c="1"></script><script id="__eqmc" type="application/json" nonce="2Mv94Jjk">{"u":"\/ajax\/qm\/?__a=1&__user=0&__comet_req=7&jazoest=2867","e":"7551447608877786948","s":"XPolarisProfileController","w":0,"f":null,"l":"AdG11BfVZRk"}</script><script nonce="2Mv94Jjk" src="data:application/x-javascript; charset=utf-8;base64,Oy8qRkJfUEtHX0RFTElNKi8KCnZhciBkYXRhRWxlbWVudD1kb2N1bWVudC5nZXRFbGVtZW50QnlJZCgiX19lcW1jIik7aWYoZGF0YUVsZW1lbnQhPW51bGwpe3ZhciBwYXJhbXM9SlNPTi5wYXJzZShkYXRhRWxlbWVudC50ZXh0Q29udGVudCksdXJpPXBhcmFtcy51LGV2ZW50X2lkPXBhcmFtcy5lLHNjcmlwdF9wYXRoPXBhcmFtcy5zLHdlaWdodD1wYXJhbXMudyxmYl9kdHNnPXBhcmFtcy5mLGxzZD1wYXJhbXMubDtpZihuYXZpZ2F0b3Iuc2VuZEJlYWNvbil7dmFyIG1hcms9ZnVuY3Rpb24oYSxiKXt2YXIgYz1wJiZwLm5vdz9NYXRoLmZsb29yKHAubm93KCkpOk1hdGgubWF4KERhdGUubm93KCktc3RhcnQsMCk7YT0iZXZlbnRfaWQ9IitldmVudF9pZCsoYT09bnVsbD8iIjoiJm1hcmtlcl9pZD0iK2EpKyImbWFya2VyX3BhZ2VfdGltZT0iK2MrIiZzY3JpcHRfcGF0aD0iK2VuY29kZVVSSUNvbXBvbmVudChzY3JpcHRfcGF0aCkrIiZ3ZWlnaHQ9Iit3ZWlnaHQrKGI/IiZjbGllbnRfc3RhcnQ9MSI6IiIpKyhmYl9kdHNnPyImZmJfZHRzZz0iK2VuY29kZVVSSUNvbXBvbmVudChmYl9kdHNnKToiIikrKGxzZD8iJmxzZD0iK2VuY29kZVVSSUNvbXBvbmVudChsc2QpOiIiKTtjPW5ldyBCbG9iKFthXSx7dHlwZToiYXBwbGljYXRpb24veC13d3ctZm9ybS11cmxlbmNvZGVkIn0pO25hdmlnYXRvci5zZW5kQmVhY29uKHVyaSxjKX0sc3RhcnQ9RGF0ZS5ub3coKSxwPXdpbmRvdy5wZXJmb3JtYW5jZTttYXJrKHdlaWdodD4wPyJDbGllbnRTY3JpcHRTdGFydCI6bnVsbCwhMCk7d2VpZ2h0PjAmJndpbmRvdy5hZGRFdmVudExpc3RlbmVyKCJiZWZvcmV1bmxvYWQiLGZ1bmN0aW9uKCl7bWFyaygiQ2xpZW50VW5sb2FkIiwhMSl9KX19Ci8vIyBzb3VyY2VVUkw9aHR0cHM6Ly9zdGF0aWMuY2RuaW5zdGFncmFtLmNvbS9yc3JjLnBocC92NC95by9yL3JNalVWM3RsZzUtLmpzCg==" data-bootloader-hash="gVT/FdM" crossorigin="anonymous" data-p=":0" data-btmanifest="1027280358_main" data-c="1"></script><script nonce="2Mv94Jjk" src="data:application/x-javascript; charset=utf-8;base64,Oy8qRkJfUEtHX0RFTElNKi8KCihmdW5jdGlvbigpe2Z1bmN0aW9uIGEoYSl7cmV0dXJuIGEucGFyZW50RWxlbWVudCE9PWRvY3VtZW50LmJvZHkmJmEucGFyZW50RWxlbWVudCE9PWRvY3VtZW50LmhlYWR9ZnVuY3Rpb24gYihhKXtyZXR1cm4gYS5ub2RlTmFtZT09PSJTQ1JJUFQifHxhLm5vZGVOYW1lPT09IkxJTksiJiYoKGE9YyhhKSk9PW51bGw/dm9pZCAwOmEuYXN5bmNDc3MpfWZ1bmN0aW9uIGMoYSl7cmV0dXJuIShhLmRhdGFzZXQgaW5zdGFuY2VvZiB3aW5kb3cuRE9NU3RyaW5nTWFwKT9udWxsOmEuZGF0YXNldH1mdW5jdGlvbiBkKGQpe3ZhciBlO3RyeXtpZihkLm5vZGVUeXBlIT09Tm9kZS5FTEVNRU5UX05PREUpcmV0dXJufWNhdGNoKGEpe3JldHVybn1pZihhKGQpfHwhYihkKSlyZXR1cm47dmFyIGY9KGU9YyhkKSk9PW51bGw/dm9pZCAwOmUuYm9vdGxvYWRlckhhc2g7aWYoZiE9bnVsbCYmZiE9PSIiKXt2YXIgZz1udWxsLGg9ZnVuY3Rpb24oKXt3aW5kb3cuX2J0bGRyW2ZdPTEsZz09bnVsbHx8ZygpfTtnPWZ1bmN0aW9uKCl7ZC5yZW1vdmVFdmVudExpc3RlbmVyKCJsb2FkIixoKSxkLnJlbW92ZUV2ZW50TGlzdGVuZXIoImVycm9yIixoKX07ZC5hZGRFdmVudExpc3RlbmVyKCJsb2FkIixoKTtkLmFkZEV2ZW50TGlzdGVuZXIoImVycm9yIixoKX19QXJyYXkuZnJvbShkb2N1bWVudC5xdWVyeVNlbGVjdG9yQWxsKCdzY3JpcHQsbGlua1tkYXRhLWFzeW5jLWNzcz0iMSJdJykpLmZvckVhY2goZnVuY3Rpb24oYSl7cmV0dXJuIGQoYSl9KTt2YXIgZT1uZXcgTXV0YXRpb25PYnNlcnZlcihmdW5jdGlvbihhLGIpe2EuZm9yRWFjaChmdW5jdGlvbihhKXthLnR5cGU9PT0iY2hpbGRMaXN0IiYmQXJyYXkuZnJvbShhLmFkZGVkTm9kZXMpLmZvckVhY2goZnVuY3Rpb24oYSl7ZChhKX0pfSl9KTtlLm9ic2VydmUoZG9jdW1lbnQuZ2V0RWxlbWVudHNCeVRhZ05hbWUoImh0bWwiKVswXSx7YXR0cmlidXRlczohMSxjaGlsZExpc3Q6ITAsc3VidHJlZTohMH0pfSkoKTsKLy8jIHNvdXJjZVVSTD1odHRwczovL3N0YXRpYy5jZG5pbnN0YWdyYW0uY29tL3JzcmMucGhwL3Y0L3k1L3Iva2t0VWFIOXBlbl8uanMK" data-bootloader-hash="YTRL02s" crossorigin="anonymous" data-p=":0" data-btmanifest="1027280358_main" data-c="1"></script><script type="application/json"  data-content-len="82" data-sjs>{"require":[["qplTimingsServerJS",null,null,["7551447608877786948","htmlStart"]]]}</script>
 <script src="data:text/javascript;base64,cmVxdWlyZUxhenkoWyJTZXJ2ZXJKU1BheWxvYWRMaXN0ZW5lciJdLGZ1bmN0aW9uKG0pe20ucHJvY2VzcygpO30sbnVsbCwweDEwMCk=" nonce="2Mv94Jjk" data-btmanifest="1027280358_main"></script>
 
@@ -640,3 +999,4 @@
 <link rel="preload" href="https://static.cdninstagram.com/rsrc.php/v4/yY/r/Eil-fzuGz0e.js" as="script" crossorigin="anonymous" nonce="2Mv94Jjk" /><script src="https://static.cdninstagram.com/rsrc.php/v4/yY/r/Eil-fzuGz0e.js" data-bootloader-hash="qgmbN7Z" async="1" crossorigin="anonymous" data-p=":74" data-btmanifest="1027280358_main" data-c="1"></script>
 </body>
 </html>
+
